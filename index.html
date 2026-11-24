@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مساعد الموظف الذكي</title>
+<link rel="icon" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Readex+Pro:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE work: a company page read by government buyers and investors, formal and calm
+   IDEA an official government letter on letterhead, sealed in red
+   PICTURE the entity's network boundary holding a server, a letter being drafted and a circulars check, with the cloud left outside and crossed out
+   COLOUR white ground, black ink, signal red for seal and actions, one grey
+   TYPE Readex Pro 700 + IBM Plex Sans Arabic
+   LAYOUT laptop: title and actions across the top, wide picture beneath, ruled bands below; phone: title, picture, actions, stacked bands */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0e0e0e);--ink:light-dark(#0b0b0b,#f1f1f1);--grey:light-dark(#646464,#a3a3a3);--rule:light-dark(#dcdcdc,#2e2e2e);--soft:light-dark(#f4f4f4,#171717);--paper:light-dark(#ffffff,#1f1f1f);--red:light-dark(#e4002b,#ff3b5c)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:24px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 "IBM Plex Sans Arabic",system-ui,sans-serif;overflow-x:clip;border-top:6px solid var(--ink)}
+h1,h2,h3,.brand{font-family:"Readex Pro","IBM Plex Sans Arabic",system-ui,sans-serif;font-weight:700}
+h2{font-size:clamp(26px,3vw,32px);line-height:1.3;margin:0 0 18px;text-wrap:balance}
+h3{font-size:19px;line-height:1.4;margin:0}
+p{margin:0}
+.band{padding-block:clamp(28px,4vw,64px);padding-left:max(5vw,16px);padding-right:max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+nav{display:flex;align-items:center;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;padding-block:18px;border-bottom:1px solid var(--rule)}
+.brand{display:flex;align-items:center;gap:10px;font-size:26px;color:inherit;text-decoration:none}
+.brand img{display:block;width:40px;height:40px}
+.links{display:flex;align-items:center;flex-wrap:wrap;gap:4px 22px}
+.links a{color:inherit;text-decoration:none;font-size:15px;padding-block:10px}
+.links a:hover{color:var(--red)}
+#lang{font:inherit;font-size:15px;min-height:44px;padding:0 18px;border:1.5px solid var(--ink);background:transparent;color:inherit;cursor:pointer}
+#lang:hover{background:var(--ink);color:var(--bg)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.hero{padding-bottom:clamp(20px,3vw,40px)}
+.top{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:24px 56px;align-items:end}
+h1{font-size:clamp(36px,5.4vw,60px);line-height:1.15;margin:0 0 16px;text-wrap:balance}
+.lead{font-size:clamp(17px,1.7vw,20px);max-width:40em}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;font-weight:600;text-decoration:none;border:1.5px solid var(--ink);color:inherit}
+.btn.main{background:var(--red);border-color:var(--red);color:#fff}
+.btn.main:hover{filter:brightness(.92)}
+.btn.alt:hover{background:var(--ink);color:var(--bg)}
+figure{margin:clamp(24px,3.5vw,44px) 0 0}
+figure svg{display:block;width:100%;height:auto}
+figcaption{font-size:14px;color:var(--grey);margin-top:10px}
+.zone{fill:var(--soft);stroke:var(--grey);stroke-width:2;stroke-dasharray:10 8}
+.cloud{fill:var(--rule)}
+.slash{stroke:var(--red);stroke-width:7;stroke-linecap:round}
+.ink{fill:var(--ink)}
+.unit{fill:var(--grey)}
+.vent{fill:var(--ink);opacity:.55}
+.led{fill:var(--red)}
+.shade{fill:var(--rule)}
+.paper{fill:var(--paper);stroke:var(--rule);stroke-width:1.5}
+.back{fill:var(--rule)}
+.ln{fill:var(--grey);opacity:.75}
+.red{fill:var(--red)}
+.wire{fill:none;stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-dasharray:1 9}
+.seal{fill:none;stroke:var(--red);stroke-width:3}
+.seal2{fill:none;stroke:var(--red);stroke-width:1.5;stroke-dasharray:3 4}
+.sign{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linecap:round}
+.tick{fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.draft{transform-box:fill-box;transform-origin:right center;animation:draft .55s ease-out both}
+@keyframes draft{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.why{background:var(--ink);color:var(--bg)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:20px 56px;align-items:start}
+.why p{font-size:clamp(17px,1.6vw,19px)}
+.why h2::after{content:"";display:block;width:56px;height:6px;background:var(--red);margin-top:16px}
+.feat{list-style:none;margin:0;padding:0;border-top:3px solid var(--ink)}
+.feat li{display:grid;grid-template-columns:minmax(0,15em) minmax(0,1fr);gap:6px 40px;padding-block:20px;border-bottom:1px solid var(--rule)}
+.feat p{color:var(--grey)}
+.steps{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 40px;margin-top:8px}
+.steps::before{content:"";position:absolute;top:9.5px;inset-inline:0;height:3px;background:var(--ink)}
+.step{position:relative;padding-top:44px}
+.dot{position:absolute;top:0;inset-inline-start:0;width:22px;height:22px;border-radius:50%;background:var(--red);box-shadow:0 0 0 6px var(--bg)}
+.step p{color:var(--grey);margin-top:6px}
+.status{background:var(--soft)}
+.status p{font-size:clamp(19px,2vw,24px);line-height:1.65;max-width:34em}
+dl{margin:0;display:grid;grid-template-columns:max-content minmax(0,1fr);gap:12px 32px;border-top:3px solid var(--ink);padding-top:20px}
+dt{color:var(--grey);font-size:15px;padding-top:2px}
+dd{margin:0;font-weight:600}
+footer{border-top:1px solid var(--rule);font-size:14px;color:var(--grey);padding-block:22px}
+@media(max-width:760px){
+.top,.two{grid-template-columns:minmax(0,1fr)}
+.feat li{grid-template-columns:minmax(0,1fr)}
+.steps{grid-template-columns:minmax(0,1fr)}
+.steps::before{top:0;bottom:0;inset-inline-end:auto;inset-inline-start:9.5px;width:3px;height:auto}
+.step{padding-top:0;padding-inline-start:46px}
+}
+@media(max-width:600px){
+.top{display:flex;flex-direction:column;align-items:stretch}
+.hero figure{order:2;margin-top:8px}
+.cta{order:3}
+dl{grid-template-columns:minmax(0,1fr);gap:2px}
+dd{margin-bottom:12px}
+}
+@media(prefers-reduced-motion:reduce){.draft{animation:none}}
+</style>
+</head>
+<body>
+<header class="band" style="padding-block:0">
+  <nav class="wrap">
+    <a class="brand" href="#top"><img src="data:image/png;base64,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" alt="" width="40" height="40"><span data-k="br">تجلى</span></a>
+    <div class="links">
+      <a href="#features" data-k="n1">المزايا</a>
+      <a href="#how" data-k="n2">كيف يعمل</a>
+      <a href="#contact" data-k="n3">تواصل</a>
+      <button id="lang" type="button">English</button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="band hero">
+    <div class="wrap">
+      <div class="top">
+        <div>
+          <h1 data-k="h1">مساعد الموظف الذكي</h1>
+          <p class="lead" data-k="lead">ذكاء اصطناعي عربي يعمل داخل شبكة جهتك، بدون إنترنت. يصيغ المراسلات الرسمية ويطابقها مع القرارات والتعاميم، ولا تخرج أي بيانات من الجهة.</p>
+        </div>
+        <div class="cta">
+          <a class="btn main" href="#contact" data-k="c1">تواصل معنا</a>
+          <a class="btn alt" href="#features" data-k="c2">المزايا</a>
+        </div>
+      </div>
+      <figure>
+        <svg viewBox="0 0 960 380" role="img" aria-label="شبكة الجهة تضم الخادم والخطاب والمطابقة مع التعاميم، والسحابة خارجها">
+          <g class="cloud">
+            <circle cx="64" cy="202" r="26"/><circle cx="97" cy="186" r="34"/><circle cx="130" cy="205" r="22"/>
+            <rect x="40" y="200" width="112" height="28" rx="14"/>
+          </g>
+          <line class="slash" x1="36" y1="246" x2="158" y2="150"/>
+          <rect class="zone" x="182" y="16" width="760" height="348" rx="26"/>
+          <ellipse class="shade" cx="290" cy="326" rx="76" ry="9"/>
+          <rect class="ink" x="230" y="94" width="120" height="226" rx="10"/>
+          <rect class="unit" x="244" y="110" width="92" height="56" rx="4"/>
+          <rect class="unit" x="244" y="178" width="92" height="56" rx="4"/>
+          <rect class="unit" x="244" y="246" width="92" height="56" rx="4"/>
+          <g class="vent">
+            <rect x="282" y="126" width="42" height="4" rx="2"/><rect x="282" y="138" width="42" height="4" rx="2"/><rect x="282" y="150" width="42" height="4" rx="2"/>
+            <rect x="282" y="194" width="42" height="4" rx="2"/><rect x="282" y="206" width="42" height="4" rx="2"/><rect x="282" y="218" width="42" height="4" rx="2"/>
+            <rect x="282" y="262" width="42" height="4" rx="2"/><rect x="282" y="274" width="42" height="4" rx="2"/><rect x="282" y="286" width="42" height="4" rx="2"/>
+          </g>
+          <circle class="led" cx="260" cy="138" r="6"/><circle class="led" cx="260" cy="206" r="6"/><circle class="led" cx="260" cy="274" r="6"/>
+          <path class="wire" d="M356 206 H428"/>
+          <rect class="back" x="470" y="48" width="262" height="300" rx="4" transform="rotate(4 601 198)"/>
+          <rect class="shade" x="448" y="54" width="262" height="300" rx="4"/>
+          <rect class="paper" x="438" y="44" width="262" height="300" rx="4"/>
+          <circle class="unit" cx="569" cy="78" r="13"/>
+          <rect class="red" x="462" y="102" width="214" height="3"/>
+          <g>
+            <rect class="ln draft" style="animation-delay:.2s" x="526" y="122" width="150" height="7" rx="3.5"/>
+            <rect class="ln draft" style="animation-delay:.6s" x="476" y="140" width="200" height="7" rx="3.5"/>
+            <rect class="ln draft" style="animation-delay:1s" x="462" y="158" width="214" height="7" rx="3.5"/>
+            <rect class="ln draft" style="animation-delay:1.4s" x="496" y="176" width="180" height="7" rx="3.5"/>
+            <rect class="ln draft" style="animation-delay:1.8s" x="462" y="194" width="214" height="7" rx="3.5"/>
+            <rect class="ln draft" style="animation-delay:2.2s" x="556" y="212" width="120" height="7" rx="3.5"/>
+            <rect class="ln draft" style="animation-delay:2.6s" x="480" y="230" width="196" height="7" rx="3.5"/>
+            <rect class="ln draft" style="animation-delay:3s" x="586" y="248" width="90" height="7" rx="3.5"/>
+          </g>
+          <g transform="rotate(-14 494 302)">
+            <circle class="seal" cx="494" cy="302" r="27"/>
+            <circle class="seal2" cx="494" cy="302" r="19"/>
+            <rect class="red" x="482" y="299" width="24" height="6" rx="3"/>
+          </g>
+          <path class="sign" d="M596 304 c10 -20 20 12 30 -6 s14 14 26 -4 s10 8 18 -1"/>
+          <path class="wire" d="M706 196 H758"/>
+          <ellipse class="shade" cx="838" cy="314" rx="70" ry="7"/>
+          <rect class="paper" x="764" y="88" width="150" height="216" rx="10"/>
+          <rect class="ink" x="828" y="108" width="62" height="7" rx="3.5"/>
+          <rect class="ln" x="782" y="140" width="78" height="7" rx="3.5"/><circle class="red" cx="886" cy="143" r="12"/><path class="tick" d="M880 143 l4 4 l8 -8"/>
+          <rect class="ln" x="782" y="196" width="78" height="7" rx="3.5"/><circle class="red" cx="886" cy="199" r="12"/><path class="tick" d="M880 199 l4 4 l8 -8"/>
+          <rect class="ln" x="782" y="252" width="78" height="7" rx="3.5"/><circle class="red" cx="886" cy="255" r="12"/><path class="tick" d="M880 255 l4 4 l8 -8"/>
+        </svg>
+        <figcaption data-k="cap">كل شيء يبقى داخل شبكة الجهة: الخادم، والخطاب، ومطابقته مع التعاميم. لا اتصال بالسحابة.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band why">
+    <div class="wrap two">
+      <h2 data-k="w1">لماذا يعمل بدون إنترنت؟</h2>
+      <p data-k="w2">الجهات الحكومية تتعامل مع مراسلات ومعلومات حساسة لا يصح إرسالها إلى خدمات الذكاء الاصطناعي السحابية. لذلك يعمل المساعد بنموذج لغوي مفتوح المصدر مثبت على خوادم الجهة نفسها، فتبقى الوثائق والمسودات والأرشيف داخلها.</p>
+    </div>
+  </section>
+
+  <section class="band" id="features">
+    <div class="wrap two">
+      <h2 data-k="f0">ماذا يقدم</h2>
+      <ul class="feat">
+        <li><h3 data-k="f1t">صياغة المراسلات الرسمية</h3><p data-k="f1d">إعداد الخطابات والتعاميم ودعوات الاجتماعات بلغة عربية إدارية رسمية.</p></li>
+        <li><h3 data-k="f2t">المطابقة مع التعاميم</h3><p data-k="f2d">مراجعة المسودات مقابل القرارات والتعاميم المعتمدة قبل إرسالها.</p></li>
+        <li><h3 data-k="f3t">إدارة المهام</h3><p data-k="f3d">إنشاء المهام وإسنادها ومتابعة إنجازها.</p></li>
+        <li><h3 data-k="f4t">الأرشفة المحلية</h3><p data-k="f4d">حفظ الملفات وأرشفتها داخل شبكة الجهة.</p></li>
+        <li><h3 data-k="f5t">العمل دون اتصال</h3><p data-k="f5d">يعمل بنموذج ذكاء اصطناعي محلي، ولا يحتاج اتصالا بالإنترنت.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band" id="how" style="padding-top:0">
+    <div class="wrap">
+      <h2 data-k="h0">كيف يعمل</h2>
+      <div class="steps">
+        <div class="step"><span class="dot"></span><h3 data-k="s1t">التثبيت على خوادم الجهة</h3><p data-k="s1d">يثبت النظام على خادم داخل الجهة مع نموذج لغوي محلي.</p></div>
+        <div class="step"><span class="dot"></span><h3 data-k="s2t">الاستخدام من المتصفح</h3><p data-k="s2d">يدخل الموظف من أي متصفح على الشبكة الداخلية، دون تثبيت أي برنامج على جهازه.</p></div>
+        <div class="step"><span class="dot"></span><h3 data-k="s3t">صياغة ومراجعة وأرشفة</h3><p data-k="s3d">يكتب الموظف طلبه، فيحصل على مسودة رسمية، يطابقها مع التعاميم، ثم يؤرشفها.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band status">
+    <div class="wrap two">
+      <h2 data-k="t0">أين وصلنا</h2>
+      <p data-k="t1">نسخة عاملة من النظام معتمدة للتشغيل لدى جهة حكومية في سلطنة عمان. ونعمل الآن على تقديمه للوزارات والهيئات العامة والشركات الكبرى في عمان ودول الخليج.</p>
+    </div>
+  </section>
+
+  <section class="band" id="contact">
+    <div class="wrap two">
+      <h2 data-k="k0">تواصل</h2>
+      <dl>
+        <dt data-k="k1">المؤسس ومطور النظام</dt><dd data-k="k2">محمد بن أحمد بن علي المعشني</dd>
+        <dt data-k="k3">الموقع</dt><dd data-k="k4">صلالة، ظفار، سلطنة عمان</dd>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer class="band">
+  <div class="wrap" data-k="ft">© 2026 تجلى. جميع الحقوق محفوظة.</div>
+</footer>
+
+<script>
+{
+const en={
+br:"TGLA",n1:"Features",n2:"How it works",n3:"Contact",
+h1:"Smart Employee Assistant",
+lead:"Arabic AI that runs inside your organization's network, with no internet. It drafts official correspondence, checks it against decisions and circulars, and no data ever leaves the entity.",
+c1:"Contact us",c2:"Features",
+cap:"Everything stays inside the entity's network: the server, the letter and its circulars check. No cloud connection.",
+w1:"Why offline?",
+w2:"Government entities handle correspondence and information too sensitive to send to cloud AI services. The assistant runs on an open-source language model installed on the entity's own servers, so documents, drafts and archives stay on site.",
+f0:"What it does",
+f1t:"Official correspondence",f1d:"Drafts letters, circulars and meeting invitations in formal administrative Arabic.",
+f2t:"Alignment with circulars",f2d:"Checks drafts against approved decisions and circulars before they are sent.",
+f3t:"Task management",f3d:"Creates tasks, assigns them and follows them up.",
+f4t:"Local archiving",f4d:"Saves and archives files inside the entity's network.",
+f5t:"Works offline",f5d:"Runs on a local AI model with no internet connection required.",
+h0:"How it works",
+s1t:"Install on your servers",s1d:"The system is installed on a server inside the entity, with a local language model.",
+s2t:"Use it from the browser",s2d:"Employees open it from any browser on the internal network, with nothing to install on their devices.",
+s3t:"Draft, review, archive",s3d:"The employee writes a request, gets a formal draft, checks it against circulars, then archives it.",
+t0:"Where we are",
+t1:"A working version of the system has been approved for deployment at a government entity in Oman. We are now preparing to offer it to ministries, public authorities and large companies in Oman and the GCC.",
+k0:"Contact",k1:"Founder and developer",k2:"Mohammed bin Ahmed bin Ali Al-Mashani",k3:"Location",k4:"Salalah, Dhofar, Sultanate of Oman",
+ft:"© 2026 TGLA. All rights reserved."
+};
+const els=[...document.querySelectorAll('[data-k]')];
+const ar={};
+els.forEach(e=>{ar[e.dataset.k]=e.textContent});
+const root=document.documentElement;
+const btn=document.getElementById('lang');
+let cur='ar';
+const setLang=l=>{
+  cur=l;
+  const d=l==='en'?en:ar;
+  els.forEach(e=>{const v=d[e.dataset.k];if(v!=null)e.textContent=v});
+  root.lang=l;
+  root.dir=l==='en'?'ltr':'rtl';
+  btn.textContent=l==='en'?'العربية':'English';
+};
+btn.addEventListener('click',()=>setLang(cur==='ar'?'en':'ar'));
+if(location.hash==='#en')setLang('en');
+}
+</script>
+</body>
+</html>
