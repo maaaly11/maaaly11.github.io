@@ -85,7 +85,9 @@ figcaption{font-size:14px;color:var(--grey);margin-top:10px}
 .ceo img{display:block;width:100%;height:auto}
 .ceo figcaption{padding:14px 16px;background:var(--paper);color:var(--ink);border-top:1.5px solid var(--rule)}
 .ceo figcaption b{display:block;font-size:18px}
-.ceo figcaption span{color:var(--grey);font-size:15px}
+.ceo figcaption span{display:block;color:var(--grey);font-size:15px}
+.ceo .cvlink{display:inline-flex;align-items:center;min-height:44px;margin-top:8px;color:var(--red);font-weight:600;text-decoration:none}
+.ceo .cvlink:hover{text-decoration:underline}
 .ceo blockquote{margin:0;border-top:3px solid var(--ink);padding-top:20px}
 .ceo blockquote p{margin:0 0 16px}
 @media (max-width:760px){.ceo{grid-template-columns:minmax(0,1fr)}.ceo figure{max-width:320px}}
@@ -277,7 +279,7 @@ dd{margin-bottom:12px}
       <div class="ceo">
         <figure>
           <img src="img/ceo.jpg" width="800" height="1000" alt="محمد بن أحمد بن علي المعشني" loading="lazy">
-          <figcaption><b data-k="v2">محمد بن أحمد بن علي المعشني</b><span data-k="v3">رئيس مجلس الإدارة والرئيس التنفيذي</span></figcaption>
+          <figcaption><b data-k="v2">محمد بن أحمد بن علي المعشني</b><span data-k="v3">رئيس مجلس الإدارة والرئيس التنفيذي</span><a class="cvlink" href="cv.html" data-k="v7">السيرة الذاتية ←</a></figcaption>
         </figure>
         <blockquote>
           <p data-k="v4">أؤمن بأن الذكاء الاصطناعي يجب أن يخدم الإنسان دون أن يأخذ بياناته. بدأت تجتك من حاجة عشتها بنفسي: وقت طويل يذهب في صياغة المراسلات ومراجعتها، وكان يمكن أن يُستثمر فيما هو أهم.</p>
@@ -459,7 +461,7 @@ s2t:"Use it from the browser",s2d:"Employees open it from any browser on the int
 s3t:"Draft, review, archive",s3d:"The employee writes a request, gets a formal draft, checks it against circulars, then archives it.",
 t0:"Where we are",
 t1:"A working version of the system has been approved for deployment at a government entity in Oman. We are now preparing to offer it to ministries, public authorities and large companies in Oman and the GCC.",
-k0:"Contact",k1:"Chairman & CEO",k7:"Company",k8:"Tajalla Trading & Contracting",k9:"Technology brand",v0:"A word from the CEO",v1:"My vision",v2:"Mohammed bin Ahmed bin Ali Al-Mashani",v3:"Chairman & CEO",v4:"I believe AI should serve people without taking their data. TGTEC began with a need I lived myself: long hours spent drafting and reviewing correspondence, time that could go to what matters more.",v5:"My vision is for TGTEC to be the Omani partner that government entities and companies across Oman and the Gulf trust, with Arabic solutions that run inside their own networks, keep their data confidential and give employees their time back.",v6:"We are building it with Omani hands, as a contribution to the digital transformation of Oman Vision 2040.",k2:"Mohammed bin Ahmed bin Ali Al-Mashani",k3:"Location",k6:"✉ Email us",k4:"Dhofar, Sultanate of Oman",
+k0:"Contact",k1:"Chairman & CEO",k7:"Company",k8:"Tajalla Trading & Contracting",k9:"Technology brand",v0:"A word from the CEO",v1:"My vision",v2:"Mohammed bin Ahmed bin Ali Al-Mashani",v3:"Chairman & CEO",v7:"Curriculum vitae →",v4:"I believe AI should serve people without taking their data. TGTEC began with a need I lived myself: long hours spent drafting and reviewing correspondence, time that could go to what matters more.",v5:"My vision is for TGTEC to be the Omani partner that government entities and companies across Oman and the Gulf trust, with Arabic solutions that run inside their own networks, keep their data confidential and give employees their time back.",v6:"We are building it with Omani hands, as a contribution to the digital transformation of Oman Vision 2040.",k2:"Mohammed bin Ahmed bin Ali Al-Mashani",k3:"Location",k6:"✉ Email us",k4:"Dhofar, Sultanate of Oman",
 ft:"© 2026 Tajalla Trading & Contracting. All rights reserved."
 };
 const els=[...document.querySelectorAll('[data-k]')];
