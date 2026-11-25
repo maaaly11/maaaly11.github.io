@@ -106,6 +106,7 @@ footer{border-top:1px solid var(--rule);font-size:14px;color:var(--grey);padding
 .units{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .unit{border:1.5px solid color-mix(in srgb,var(--bg) 25%,transparent);padding:26px;display:grid;gap:8px;text-decoration:none;color:inherit}
 .unit:hover{border-color:var(--red)}
+.unit .tag{font-style:normal;font-size:14px;color:var(--red);font-weight:600}
 .unit b{font-family:"Readex Pro",sans-serif;font-size:24px}
 .unit span{opacity:.8}
 .mk{--cof:#6b3e26;--sand:#e9dcc8}
@@ -281,10 +282,10 @@ dd{margin-bottom:12px}
 
   <section class="band group" id="group">
     <div class="wrap two">
-      <h2 data-k="g0">مجموعة تجلى</h2>
+      <div><h2 data-k="g0">مجموعة تجلى</h2><p data-k="g4" style="opacity:.85">تجلى للتجارة والمقاولات هي الشركة الأم، وتضم فرعين: حلول الذكاء الاصطناعي، والقهوة.</p></div>
       <div class="units">
-        <a class="unit" href="#top"><b>TGLA</b><span data-k="g1">حلول الذكاء الاصطناعي للجهات الحكومية: مساعد الموظف الذكي</span></a>
-        <a class="unit" href="#molokai"><b data-k="g2">مولوكاي Molokai</b><span data-k="g3">قهوة درايف ثرو في صلالة، بتحميص محلي</span></a>
+        <a class="unit" href="#top"><i class="tag" data-k="g5">فرع حلول الذكاء الاصطناعي</i><b>TGLA</b><span data-k="g1">حلول الذكاء الاصطناعي للجهات الحكومية: مساعد الموظف الذكي</span></a>
+        <a class="unit" href="#molokai"><i class="tag" data-k="g6">فرع القهوة</i><b data-k="g2">مولوكاي Molokai</b><span data-k="g3">قهوة درايف ثرو في صلالة، بتحميص محلي</span></a>
       </div>
     </div>
   </section>
@@ -321,7 +322,7 @@ dd{margin-bottom:12px}
 <script>
 {
 const en={
-br:"TGLA",n1:"Features",n5:"Molokai",g0:"Tajalla Group",g1:"AI solutions for government entities: Smart Employee Assistant",g2:"Molokai",g3:"Drive-thru coffee in Salalah, roasted in-house",m0:"Molokai, coffee from Dhofar",m1:"A drive-thru coffee brand in Salalah, part of Tajalla Group. We roast our own beans on a drum roaster and serve your coffee while you stay in your car.",m2:"Smoky Arabic coffee",m3:"Nicaraguan Arabica beans, roasted locally with a smoky Arabic profile.",m4:"Freshly roasted beans",m5:"Coffee roasted in Salalah, available for home and office.",m6:"Drive-thru drinks",m7:"Hot and iced coffee served fast from the kiosk window.",m8:"Visit us: Molokai kiosk, Salalah",m9:"Follow us on Snapchat",n4:"Try it",d0:"Try the system",d1:"A demo that imitates how the assistant works, using ready templates. The real version runs on a local AI model inside the entity.",d2:"Smart Employee Assistant",d3:"Works offline",d4:"Type",d5:"Addressed to",d6:"Subject",d7:"Details",d8:"Draft it",d9:"Copy text",c_a:"Formal administrative Arabic",c_b:"No conflict with approved circulars in the archive",c_c:"Draft saved to the local archive",k5:"Email",n2:"How it works",n3:"Contact",
+br:"TGLA",n1:"Features",n5:"Molokai",g0:"Tajalla Group",g4:"Tajalla Trading & Contracting is the parent company, with two branches: AI solutions and coffee.",g5:"AI solutions branch",g6:"Coffee branch",g1:"AI solutions for government entities: Smart Employee Assistant",g2:"Molokai",g3:"Drive-thru coffee in Salalah, roasted in-house",m0:"Molokai, coffee from Dhofar",m1:"A drive-thru coffee brand in Salalah, part of Tajalla Group. We roast our own beans on a drum roaster and serve your coffee while you stay in your car.",m2:"Smoky Arabic coffee",m3:"Nicaraguan Arabica beans, roasted locally with a smoky Arabic profile.",m4:"Freshly roasted beans",m5:"Coffee roasted in Salalah, available for home and office.",m6:"Drive-thru drinks",m7:"Hot and iced coffee served fast from the kiosk window.",m8:"Visit us: Molokai kiosk, Salalah",m9:"Follow us on Snapchat",n4:"Try it",d0:"Try the system",d1:"A demo that imitates how the assistant works, using ready templates. The real version runs on a local AI model inside the entity.",d2:"Smart Employee Assistant",d3:"Works offline",d4:"Type",d5:"Addressed to",d6:"Subject",d7:"Details",d8:"Draft it",d9:"Copy text",c_a:"Formal administrative Arabic",c_b:"No conflict with approved circulars in the archive",c_c:"Draft saved to the local archive",k5:"Email",n2:"How it works",n3:"Contact",
 h1:"Smart Employee Assistant",
 lead:"Arabic AI that runs inside your organization's network, with no internet. It drafts official correspondence, checks it against decisions and circulars, and no data ever leaves the entity.",
 c1:"Contact us",c2:"Try the system",
