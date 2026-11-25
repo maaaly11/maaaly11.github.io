@@ -102,23 +102,6 @@ footer{border-top:1px solid var(--rule);font-size:14px;color:var(--grey);padding
 .note{font-size:14px;color:var(--grey)}
 .chk{list-style:none;padding:0;margin:0;display:grid;gap:6px;font-size:15px}
 .chk li::before{content:"✓";color:var(--red);font-weight:700;margin-inline-end:8px}
-.group{background:var(--ink);color:var(--bg)}
-.units{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-.unit{border:1.5px solid color-mix(in srgb,var(--bg) 25%,transparent);padding:26px;display:grid;gap:8px;text-decoration:none;color:inherit}
-.unit:hover{border-color:var(--red)}
-.unit .tag{font-style:normal;font-size:14px;color:var(--red);font-weight:600}
-.unit b{font-family:"Readex Pro",sans-serif;font-size:24px}
-.unit span{opacity:.8}
-.mk{--cof:#6b3e26;--sand:#e9dcc8}
-.molo{background:var(--sand);color:#2a1a10}
-.molo h2{color:#2a1a10}
-.molo .lead2{font-size:19px;max-width:40em;margin-bottom:28px}
-.prods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.prod{background:#fff8ee;border-top:6px solid #6b3e26;padding:22px}
-.prod h3{color:#2a1a10}
-.prod p{color:#5a4636;margin-top:6px}
-.visit{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px 30px;font-weight:600}
-@media(max-width:760px){.units,.prods{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:760px){.app{grid-template-columns:minmax(0,1fr)}.ctl{border-inline-end:0;border-bottom:1px solid var(--rule)}}
 @media(max-width:760px){
 .top,.two{grid-template-columns:minmax(0,1fr)}
@@ -145,7 +128,6 @@ dd{margin-bottom:12px}
       <a href="#features" data-k="n1">المزايا</a>
       <a href="#how" data-k="n2">كيف يعمل</a>
       <a href="#demo" data-k="n4">جرّب</a>
-      <a href="#molokai" data-k="n5">مولوكاي</a>
       <a href="#contact" data-k="n3">تواصل</a>
       <button id="lang" type="button">English</button>
     </div>
@@ -280,29 +262,6 @@ dd{margin-bottom:12px}
     </div>
   </section>
 
-  <section class="band group" id="group">
-    <div class="wrap two">
-      <div><h2 data-k="g0">مجموعة تجلى</h2><p data-k="g4" style="opacity:.85">تجلى للتجارة والمقاولات هي الشركة الأم، وتضم فرعين: حلول الذكاء الاصطناعي، والقهوة.</p></div>
-      <div class="units">
-        <a class="unit" href="#top"><i class="tag" data-k="g5">فرع حلول الذكاء الاصطناعي</i><b>TGLA</b><span data-k="g1">حلول الذكاء الاصطناعي للجهات الحكومية: مساعد الموظف الذكي</span></a>
-        <a class="unit" href="#molokai"><i class="tag" data-k="g6">فرع القهوة</i><b data-k="g2">مولوكاي Molokai</b><span data-k="g3">قهوة درايف ثرو في صلالة، بتحميص محلي</span></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="band molo" id="molokai">
-    <div class="wrap">
-      <h2 data-k="m0">مولوكاي، قهوة من ظفار</h2>
-      <p class="lead2" data-k="m1">علامة قهوة درايف ثرو في صلالة، ضمن مجموعة تجلى. نحمّص حبوبنا بأنفسنا في محمصة أسطوانية، ونقدم القهوة لك وأنت في سيارتك.</p>
-      <div class="prods">
-        <div class="prod"><h3 data-k="m2">القهوة العربية المدخنة</h3><p data-k="m3">حبوب أرابيكا من نيكاراغوا، محمصة محليا بنكهة مدخنة على الطريقة العربية.</p></div>
-        <div class="prod"><h3 data-k="m4">حبوب محمصة طازجة</h3><p data-k="m5">قهوة محمصة في صلالة، متوفرة للبيت والمكتب.</p></div>
-        <div class="prod"><h3 data-k="m6">مشروبات الدرايف ثرو</h3><p data-k="m7">قهوة ساخنة وباردة جاهزة بسرعة من نافذة الكشك.</p></div>
-      </div>
-      <div class="visit"><span data-k="m8">زورونا: كشك مولوكاي، صلالة</span><span data-k="m9">تابعونا على سناب شات</span></div>
-    </div>
-  </section>
-
   <section class="band" id="contact">
     <div class="wrap two">
       <h2 data-k="k0">تواصل</h2>
@@ -316,13 +275,13 @@ dd{margin-bottom:12px}
 </main>
 
 <footer class="band">
-  <div class="wrap" data-k="ft">© 2026 مجموعة تجلى. جميع الحقوق محفوظة.</div>
+  <div class="wrap" data-k="ft">© 2026 تجلى. جميع الحقوق محفوظة.</div>
 </footer>
 
 <script>
 {
 const en={
-br:"TGLA",n1:"Features",n5:"Molokai",g0:"Tajalla Group",g4:"Tajalla Trading & Contracting is the parent company, with two branches: AI solutions and coffee.",g5:"AI solutions branch",g6:"Coffee branch",g1:"AI solutions for government entities: Smart Employee Assistant",g2:"Molokai",g3:"Drive-thru coffee in Salalah, roasted in-house",m0:"Molokai, coffee from Dhofar",m1:"A drive-thru coffee brand in Salalah, part of Tajalla Group. We roast our own beans on a drum roaster and serve your coffee while you stay in your car.",m2:"Smoky Arabic coffee",m3:"Nicaraguan Arabica beans, roasted locally with a smoky Arabic profile.",m4:"Freshly roasted beans",m5:"Coffee roasted in Salalah, available for home and office.",m6:"Drive-thru drinks",m7:"Hot and iced coffee served fast from the kiosk window.",m8:"Visit us: Molokai kiosk, Salalah",m9:"Follow us on Snapchat",n4:"Try it",d0:"Try the system",d1:"A demo that imitates how the assistant works, using ready templates. The real version runs on a local AI model inside the entity.",d2:"Smart Employee Assistant",d3:"Works offline",d4:"Type",d5:"Addressed to",d6:"Subject",d7:"Details",d8:"Draft it",d9:"Copy text",c_a:"Formal administrative Arabic",c_b:"No conflict with approved circulars in the archive",c_c:"Draft saved to the local archive",k5:"Email",n2:"How it works",n3:"Contact",
+br:"TGLA",n1:"Features",n4:"Try it",d0:"Try the system",d1:"A demo that imitates how the assistant works, using ready templates. The real version runs on a local AI model inside the entity.",d2:"Smart Employee Assistant",d3:"Works offline",d4:"Type",d5:"Addressed to",d6:"Subject",d7:"Details",d8:"Draft it",d9:"Copy text",c_a:"Formal administrative Arabic",c_b:"No conflict with approved circulars in the archive",c_c:"Draft saved to the local archive",k5:"Email",n2:"How it works",n3:"Contact",
 h1:"Smart Employee Assistant",
 lead:"Arabic AI that runs inside your organization's network, with no internet. It drafts official correspondence, checks it against decisions and circulars, and no data ever leaves the entity.",
 c1:"Contact us",c2:"Try the system",
@@ -342,7 +301,7 @@ s3t:"Draft, review, archive",s3d:"The employee writes a request, gets a formal d
 t0:"Where we are",
 t1:"A working version of the system has been approved for deployment at a government entity in Oman. We are now preparing to offer it to ministries, public authorities and large companies in Oman and the GCC.",
 k0:"Contact",k1:"Founder and developer",k2:"Mohammed bin Ahmed bin Ali Al-Mashani",k3:"Location",k4:"Salalah, Dhofar, Sultanate of Oman",
-ft:"© 2026 Tajalla Group. All rights reserved."
+ft:"© 2026 TGLA. All rights reserved."
 };
 const els=[...document.querySelectorAll('[data-k]')];
 const ar={};
