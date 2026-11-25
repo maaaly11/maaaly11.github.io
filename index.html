@@ -494,5 +494,101 @@ if(location.hash==='#en')setLang('en');
 
 }
 </script>
+<div id="wac" dir="rtl">
+  <div class="wac-tip" id="wacTip" hidden><button type="button" class="wac-x" id="wacTipX" aria-label="إغلاق">×</button><span id="wacTipT">مرحباً 👋 هل لديك استفسار؟</span></div>
+  <section class="wac-panel" id="wacPanel" hidden aria-label="محادثة الاستفسارات">
+    <header class="wac-head">
+      <div><b>تجتك TGTEC</b><small id="wacSub">نرد عادةً خلال ساعات العمل</small></div>
+      <button type="button" class="wac-x" id="wacClose" aria-label="إغلاق">×</button>
+    </header>
+    <div class="wac-body" id="wacBody" aria-live="polite"></div>
+    <div class="wac-quick" id="wacQuick"></div>
+    <form class="wac-form" id="wacForm">
+      <input id="wacIn" autocomplete="off" placeholder="اكتب استفسارك…" aria-label="اكتب استفسارك">
+      <button type="submit" id="wacSend" aria-label="إرسال">➤</button>
+    </form>
+    <a class="wac-go" id="wacGo" href="https://wa.me/96891155592" target="_blank" rel="noopener">تواصل عبر واتساب</a>
+  </section>
+  <button type="button" class="wac-btn" id="wacBtn" aria-label="محادثة واتساب" aria-expanded="false">
+    <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path fill="#fff" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2.1 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.8-1.6l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.8-1.8-5.9 0-5.9 4.9-10.7 10.9-10.7s10.9 4.8 10.9 10.7-4.9 10.7-10.9 10.7zm6-8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1c-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2s0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6s0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.7 1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 2.8 1.1 3.4.9 4 .8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+  </button>
+</div>
+<style>
+#wac{position:fixed;bottom:16px;right:16px;z-index:60;display:flex;flex-direction:column;align-items:flex-start;gap:10px;font:15px/1.6 "IBM Plex Sans Arabic",system-ui,sans-serif}
+#wac[dir=ltr]{right:auto;left:16px}
+#wac [hidden]{display:none!important}
+.wac-btn{width:60px;height:60px;border-radius:50%;border:0;background:#1f8a4c;display:grid;place-items:center;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.25);animation:wacIn .4s ease-out}
+.wac-btn:hover{filter:brightness(1.08)}
+.wac-btn:focus-visible,.wac-x:focus-visible,.wac-q:focus-visible,.wac-form button:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.wac-tip{position:relative;max-width:240px;background:var(--paper);color:var(--ink);border:1.5px solid var(--rule);padding:10px 34px 10px 14px;box-shadow:0 6px 18px rgba(0,0,0,.15);animation:wacIn .3s ease-out}
+#wac[dir=ltr] .wac-tip{padding:10px 14px 10px 34px}
+.wac-tip .wac-x{position:absolute;top:2px;inset-inline-start:2px}
+.wac-panel{width:min(360px,calc(100vw - 32px));max-height:min(560px,calc(100vh - 110px));display:flex;flex-direction:column;background:var(--bg);color:var(--ink);border:1.5px solid var(--ink);box-shadow:0 10px 30px rgba(0,0,0,.3);animation:wacIn .25s ease-out}
+.wac-head{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 14px;background:#1f8a4c;color:#fff}
+.wac-head b{display:block;font-size:16px}.wac-head small{opacity:.9}
+.wac-x{background:transparent;border:0;color:inherit;font-size:24px;line-height:1;width:44px;height:44px;cursor:pointer}
+.wac-body{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:8px;background:var(--soft);min-height:140px}
+.wac-m{max-width:85%;padding:8px 12px;white-space:pre-line}
+.wac-m.bot{align-self:flex-start;background:var(--paper);border:1px solid var(--rule)}
+.wac-m.me{align-self:flex-end;background:#d9f2e3;color:#0b0b0b}
+.wac-quick{display:flex;flex-wrap:wrap;gap:6px;padding:10px 14px 0}
+.wac-q{font:inherit;font-size:14px;min-height:36px;padding:4px 12px;border:1.5px solid #1f8a4c;background:transparent;color:inherit;cursor:pointer}
+.wac-q:hover{background:#1f8a4c;color:#fff}
+.wac-form{display:flex;gap:8px;padding:10px 14px}
+.wac-form input{flex:1;min-width:0;font:inherit;min-height:44px;padding:0 12px;border:1.5px solid var(--rule);background:var(--paper);color:var(--ink)}
+.wac-form button{width:44px;min-height:44px;border:0;background:#1f8a4c;color:#fff;font-size:18px;cursor:pointer}
+#wac[dir=rtl] .wac-form button{transform:scaleX(-1)}
+.wac-go{display:block;margin:0 14px 14px;padding:10px;text-align:center;background:#1f8a4c;color:#fff;font-weight:600;text-decoration:none}
+@keyframes wacIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.wac-btn,.wac-tip,.wac-panel{animation:none}}
+@media print{#wac{display:none}}
+</style>
+<script>
+(()=>{
+const WA='96891155592';
+const T={
+ ar:{tip:'مرحباً 👋 هل لديك استفسار؟',sub:'نرد عادةً خلال ساعات العمل',ph:'اكتب استفسارك…',go:'تواصل عبر واتساب',
+  hi:'مرحباً بك في تجتك TGTEC 👋\nاختر سؤالاً من الأسفل، أو اكتب استفسارك وسنكمل معك على واتساب.',
+  sent:'شكراً لك! سيُفتح واتساب الآن لإرسال رسالتك إلينا مباشرة.',more:'هل تريد التحدث معنا مباشرة؟ اضغط «تواصل عبر واتساب».',
+  qs:[['ما هو مساعد الموظف الذكي؟','مساعد ذكاء اصطناعي عربي يصيغ المراسلات الرسمية: الخطابات والتعاميم ودعوات الاجتماعات، ويطابقها مع القرارات والتعاميم المعتمدة، ويؤرشفها داخل شبكة جهتك.'],
+   ['هل يعمل بدون إنترنت؟','نعم ✅ يعمل بنموذج لغوي مثبت على خوادم الجهة نفسها، دون أي اتصال بالإنترنت، فلا تخرج أي بيانات من الجهة.'],
+   ['أريد عرضاً تقديمياً','يسعدنا ذلك! اضغط «تواصل عبر واتساب» أو راسلنا على info@tgtec.om، وسنرتب معك موعداً مناسباً.'],
+   ['كم التكلفة؟','تُحدَّد التكلفة حسب حجم الجهة وعدد المستخدمين ومتطلبات التركيب. تواصل معنا عبر واتساب لنرسل لك عرض سعر.']],
+  pre:'مرحباً تجتك، لدي استفسار: '},
+ en:{tip:'Hi 👋 Have a question?',sub:'We usually reply during working hours',ph:'Type your question…',go:'Chat on WhatsApp',
+  hi:'Welcome to TGTEC 👋\nPick a question below, or type yours and we will continue on WhatsApp.',
+  sent:'Thank you! WhatsApp will open now so you can send your message to us directly.',more:'Want to talk to us directly? Tap "Chat on WhatsApp".',
+  qs:[['What is the Smart Employee Assistant?','An Arabic AI assistant that drafts official correspondence (letters, circulars, meeting invitations), checks it against approved decisions and circulars, and archives it inside your network.'],
+   ['Does it work offline?','Yes ✅ It runs on a language model installed on the entity\'s own servers with no internet connection, so no data leaves the entity.'],
+   ['I want a presentation','Happy to! Tap "Chat on WhatsApp" or email info@tgtec.om and we will arrange a suitable time.'],
+   ['How much does it cost?','Pricing depends on the size of the entity, the number of users and installation needs. Contact us on WhatsApp for a quote.']],
+  pre:'Hello TGTEC, I have a question: '}};
+const $=id=>document.getElementById(id);
+const box=$('wac'),btn=$('wacBtn'),panel=$('wacPanel'),body=$('wacBody'),quick=$('wacQuick'),tip=$('wacTip');
+const lang=()=>document.documentElement.lang==='en'?'en':'ar';
+const ss={get:k=>{try{return sessionStorage.getItem(k)}catch(e){return null}},set:(k,v)=>{try{sessionStorage.setItem(k,v)}catch(e){}}};
+const add=(t,who)=>{const d=document.createElement('div');d.className='wac-m '+who;d.textContent=t;body.appendChild(d);body.scrollTop=body.scrollHeight;};
+const waUrl=t=>'https://wa.me/'+WA+'?text='+encodeURIComponent(t);
+function render(){const L=T[lang()];box.dir=lang()==='en'?'ltr':'rtl';
+ $('wacTipT').textContent=L.tip;$('wacSub').textContent=L.sub;$('wacIn').placeholder=L.ph;$('wacIn').setAttribute('aria-label',L.ph);
+ $('wacGo').textContent=L.go;$('wacGo').href=waUrl(L.pre);
+ body.textContent='';add(L.hi,'bot');quick.textContent='';
+ L.qs.forEach(([q,a])=>{const b=document.createElement('button');b.type='button';b.className='wac-q';b.textContent=q;
+  b.onclick=()=>{add(q,'me');setTimeout(()=>{add(a,'bot');add(L.more,'bot')},350)};quick.appendChild(b)});}
+function open(){render();panel.hidden=false;tip.hidden=true;btn.setAttribute('aria-expanded','true');ss.set('wacSeen','1');$('wacIn').focus({preventScroll:true});}
+function close(){panel.hidden=true;btn.setAttribute('aria-expanded','false');btn.focus();}
+btn.onclick=()=>panel.hidden?open():close();
+$('wacClose').onclick=close;
+$('wacTipX').onclick=e=>{e.stopPropagation();tip.hidden=true;ss.set('wacSeen','1');};
+tip.onclick=open;
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden)close();});
+$('wacForm').onsubmit=e=>{e.preventDefault();const v=$('wacIn').value.trim();if(!v)return;const L=T[lang()];
+ add(v,'me');$('wacIn').value='';setTimeout(()=>add(L.sent,'bot'),200);
+ window.open(waUrl(L.pre+v),'_blank','noopener');};
+new MutationObserver(()=>{if(!panel.hidden)render();else{box.dir=lang()==='en'?'ltr':'rtl';$('wacTipT').textContent=T[lang()].tip;}}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+if(!ss.get('wacSeen'))setTimeout(()=>{if(panel.hidden){$('wacTipT').textContent=T[lang()].tip;tip.hidden=false;}},4000);
+})();
+</script>
+
 </body>
 </html>
