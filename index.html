@@ -85,6 +85,24 @@ dl{margin:0;display:grid;grid-template-columns:max-content minmax(0,1fr);gap:12p
 dt{color:var(--grey);font-size:15px;padding-top:2px}
 dd{margin:0;font-weight:600}
 footer{border-top:1px solid var(--rule);font-size:14px;color:var(--grey);padding-block:22px}
+.demo{background:var(--soft)}
+.app{border:1.5px solid var(--ink);background:var(--paper);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr)}
+.bar{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 16px;background:var(--ink);color:var(--bg);font-size:14px}
+.bar b{display:inline-block;width:10px;height:10px;background:var(--red);margin-inline-end:8px}
+.ctl{padding:20px;display:grid;gap:14px;align-content:start;border-inline-end:1px solid var(--rule)}
+.ctl label{font-size:14px;color:var(--grey);display:grid;gap:6px}
+.ctl select,.ctl input,.ctl textarea{font:inherit;font-size:16px;padding:10px 12px;border:1.5px solid var(--rule);background:var(--bg);color:var(--ink);width:100%}
+.ctl textarea{min-height:90px;resize:vertical}
+.ctl select:focus,.ctl input:focus,.ctl textarea:focus{outline:3px solid var(--red);outline-offset:0}
+#go{font:inherit;font-weight:600;min-height:48px;border:0;background:var(--red);color:#fff;cursor:pointer}
+.out{padding:24px;min-height:420px;display:grid;align-content:start;gap:12px}
+.out .tools{display:flex;gap:8px;flex-wrap:wrap}
+.out .tools button{font:inherit;font-size:14px;min-height:40px;padding:0 14px;border:1.5px solid var(--ink);background:transparent;color:inherit;cursor:pointer}
+#doc{white-space:pre-wrap;font:inherit;font-size:16px;line-height:1.95;border-top:3px solid var(--red);padding-top:16px;margin:0}
+.note{font-size:14px;color:var(--grey)}
+.chk{list-style:none;padding:0;margin:0;display:grid;gap:6px;font-size:15px}
+.chk li::before{content:"✓";color:var(--red);font-weight:700;margin-inline-end:8px}
+@media(max-width:760px){.app{grid-template-columns:minmax(0,1fr)}.ctl{border-inline-end:0;border-bottom:1px solid var(--rule)}}
 @media(max-width:760px){
 .top,.two{grid-template-columns:minmax(0,1fr)}
 .feat li{grid-template-columns:minmax(0,1fr)}
@@ -109,6 +127,7 @@ dd{margin-bottom:12px}
     <div class="links">
       <a href="#features" data-k="n1">المزايا</a>
       <a href="#how" data-k="n2">كيف يعمل</a>
+      <a href="#demo" data-k="n4">جرّب</a>
       <a href="#contact" data-k="n3">تواصل</a>
       <button id="lang" type="button">English</button>
     </div>
@@ -125,7 +144,7 @@ dd{margin-bottom:12px}
         </div>
         <div class="cta">
           <a class="btn main" href="#contact" data-k="c1">تواصل معنا</a>
-          <a class="btn alt" href="#features" data-k="c2">المزايا</a>
+          <a class="btn alt" href="#demo" data-k="c2">جرّب النظام</a>
         </div>
       </div>
       <figure>
@@ -213,6 +232,29 @@ dd{margin-bottom:12px}
     </div>
   </section>
 
+  <section class="band demo" id="demo">
+    <div class="wrap">
+      <h2 data-k="d0">جرّب النظام</h2>
+      <p class="note" data-k="d1" style="margin-bottom:18px">عرض توضيحي يحاكي طريقة عمل المساعد بقوالب جاهزة. النسخة الفعلية تعمل بنموذج ذكاء اصطناعي محلي داخل الجهة.</p>
+      <div class="app">
+        <div class="bar"><span><b></b><span data-k="d2">مساعد الموظف الذكي</span></span><span data-k="d3">يعمل بدون إنترنت</span></div>
+        <form class="ctl" id="f">
+          <label><span data-k="d4">نوع المراسلة</span>
+            <select id="type"><option value="letter">خطاب رسمي</option><option value="circ">تعميم داخلي</option><option value="meet">دعوة اجتماع</option></select></label>
+          <label><span data-k="d5">الجهة المرسل إليها</span><input id="to" value="المدير العام للشؤون الإدارية والمالية"></label>
+          <label><span data-k="d6">الموضوع</span><input id="subj" value="تحديث أجهزة الحاسب الآلي في قسم الأرشيف"></label>
+          <label><span data-k="d7">تفاصيل الطلب</span><textarea id="det">نرغب في تحديث 12 جهاز حاسب آلي بسبب تقادمها وتأثيرها على سرعة إنجاز المعاملات، مع تقدير تكلفة مبدئية.</textarea></label>
+          <button id="go" type="submit" data-k="d8">صياغة المسودة</button>
+        </form>
+        <div class="out">
+          <div class="tools"><button type="button" id="copy" data-k="d9">نسخ النص</button></div>
+          <pre id="doc" aria-live="polite"></pre>
+          <ul class="chk" id="chk" hidden><li data-k="c_a">الصياغة بلغة عربية إدارية رسمية</li><li data-k="c_b">لا تعارض مع التعاميم المعتمدة في الأرشيف</li><li data-k="c_c">حفظت المسودة في الأرشيف المحلي</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="band status">
     <div class="wrap two">
       <h2 data-k="t0">أين وصلنا</h2>
@@ -225,6 +267,7 @@ dd{margin-bottom:12px}
       <h2 data-k="k0">تواصل</h2>
       <dl>
         <dt data-k="k1">المؤسس ومطور النظام</dt><dd data-k="k2">محمد بن أحمد بن علي المعشني</dd>
+        <dt data-k="k5">البريد</dt><dd><a href="mailto:info@taglaa.com" style="color:inherit">info@taglaa.com</a></dd>
         <dt data-k="k3">الموقع</dt><dd data-k="k4">صلالة، ظفار، سلطنة عمان</dd>
       </dl>
     </div>
@@ -238,10 +281,10 @@ dd{margin-bottom:12px}
 <script>
 {
 const en={
-br:"TGLA",n1:"Features",n2:"How it works",n3:"Contact",
+br:"TGLA",n1:"Features",n4:"Try it",d0:"Try the system",d1:"A demo that imitates how the assistant works, using ready templates. The real version runs on a local AI model inside the entity.",d2:"Smart Employee Assistant",d3:"Works offline",d4:"Type",d5:"Addressed to",d6:"Subject",d7:"Details",d8:"Draft it",d9:"Copy text",c_a:"Formal administrative Arabic",c_b:"No conflict with approved circulars in the archive",c_c:"Draft saved to the local archive",k5:"Email",n2:"How it works",n3:"Contact",
 h1:"Smart Employee Assistant",
 lead:"Arabic AI that runs inside your organization's network, with no internet. It drafts official correspondence, checks it against decisions and circulars, and no data ever leaves the entity.",
-c1:"Contact us",c2:"Features",
+c1:"Contact us",c2:"Try the system",
 cap:"Everything stays inside the entity's network: the server, the letter and its circulars check. No cloud connection.",
 w1:"Why offline?",
 w2:"Government entities handle correspondence and information too sensitive to send to cloud AI services. The assistant runs on an open-source language model installed on the entity's own servers, so documents, drafts and archives stay on site.",
@@ -276,6 +319,21 @@ const setLang=l=>{
 };
 btn.addEventListener('click',()=>setLang(cur==='ar'?'en':'ar'));
 if(location.hash==='#en')setLang('en');
+const T={
+letter:(to,sj,d)=>`الفاضل/ ${to}\nالمحترم\n\nالسلام عليكم ورحمة الله وبركاته،\n\nالموضوع: ${sj}\n\nتهديكم الدائرة أطيب التحايا، وبالإشارة إلى الموضوع أعلاه، نود الإفادة بأنه ${d}\n\nعليه، نأمل التكرم بالاطلاع والموافقة على اتخاذ ما ترونه مناسبا في هذا الشأن.\n\nشاكرين لكم حسن تعاونكم،\nوتفضلوا بقبول فائق الاحترام والتقدير.\n\nمدير الدائرة`,
+circ:(to,sj,d)=>`تعميم رقم (   ) لسنة 2026\n\nإلى: ${to}\nالموضوع: ${sj}\n\nإلحاقا بالتعليمات المعمول بها، يعمم على جميع المعنيين ما يلي:\n\n1. ${d}\n2. يعمل بهذا التعميم اعتبارا من تاريخه.\n3. على الجميع الالتزام بما ورد فيه، والتواصل مع الدائرة المختصة لأي استفسار.\n\nوالله ولي التوفيق،\n\nالمدير العام`,
+meet:(to,sj,d)=>`الفاضل/ ${to}\nالمحترم\n\nالسلام عليكم ورحمة الله وبركاته،\n\nالموضوع: دعوة لحضور اجتماع بشأن ${sj}\n\nيسرنا دعوتكم لحضور الاجتماع المخصص لمناقشة الموضوع أعلاه، وذلك يوم الأحد الموافق ( / / 2026) الساعة العاشرة صباحا بقاعة الاجتماعات الرئيسية.\n\nمحاور الاجتماع: ${d}\n\nنأمل التكرم بالحضور أو تكليف من ينوب عنكم.\n\nوتفضلوا بقبول فائق الاحترام والتقدير.\n\nمدير الدائرة`};
+const doc=document.getElementById('doc'),chk=document.getElementById('chk');
+let timer;
+const run=()=>{clearInterval(timer);chk.hidden=true;
+ const v=k=>document.getElementById(k).value.trim()||'...';
+ const txt=T[document.getElementById('type').value](v('to'),v('subj'),v('det'));
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches){doc.textContent=txt;chk.hidden=false;return}
+ let i=0;doc.textContent='';timer=setInterval(()=>{i+=4;doc.textContent=txt.slice(0,i);if(i>=txt.length){clearInterval(timer);chk.hidden=false}},16)};
+document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();run()});
+document.getElementById('copy').addEventListener('click',async e=>{try{await navigator.clipboard.writeText(doc.textContent);e.target.textContent='✓'}catch(_){}});
+doc.textContent=T.letter(document.getElementById('to').value,document.getElementById('subj').value,document.getElementById('det').value);chk.hidden=false;
+
 }
 </script>
 </body>
