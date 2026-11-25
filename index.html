@@ -170,6 +170,20 @@ footer{border-top:1px solid var(--rule);font-size:14px;color:var(--grey);padding
 .blabel{display:inline-block;font-weight:600;font-size:15px;color:var(--red);margin-bottom:10px}
 .h1like{font-size:clamp(32px,4.6vw,52px);line-height:1.2;margin:0 0 16px;text-wrap:balance}
 .tgla{border-top:1px solid var(--rule)}
+.plist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:6px 0 clamp(36px,4.5vw,60px)}
+.pt{display:flex;flex-direction:column;gap:8px;padding:24px;background:var(--soft);border-top:4px solid var(--red);color:inherit;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.pt.soon{background:var(--ink);color:var(--bg)}
+.pt:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.12)}
+.pt-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+.pt-n{font-family:"Readex Pro",sans-serif;font-weight:700;font-size:15px;opacity:.45;letter-spacing:.05em}
+.pt-st{font-size:13px;font-weight:600;padding:1px 10px;border:1px solid var(--red);color:var(--red)}
+.pt.live .pt-st{background:var(--red);color:#fff}
+.pt h3{font-size:clamp(19px,2vw,22px)}
+.pt p{margin:0;opacity:.75}
+.pt-go{margin-top:auto;padding-top:8px;font-weight:600;color:var(--red)}
+@media(max-width:760px){.plist{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){.pt{transition:none}.pt:hover{transform:none}}
+
 .fgrid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:28px}
 .fgrid h4{font-family:"Readex Pro",sans-serif;font-size:16px;margin:0 0 10px;color:var(--ink)}
 .fgrid a{display:block;color:var(--grey);text-decoration:none;padding-block:4px}
@@ -351,9 +365,24 @@ dd{margin-bottom:12px}
 
   <section class="band hero tgla" id="tgla">
     <div class="wrap">
+      <span class="blabel" data-k="b1">منتجاتنا</span>
+      <div class="plist">
+        <a class="pt live" href="#features">
+          <span class="pt-row"><span class="pt-n">01</span><span class="pt-st" data-k="p1s">متاح الآن</span></span>
+          <h3 data-k="p1t">مساعد الموظف الذكي</h3>
+          <p data-k="p1d">يصيغ المراسلات الرسمية ويطابقها مع القرارات والتعاميم، داخل شبكة الجهة ودون إنترنت.</p>
+          <span class="pt-go" data-k="p1g">المزايا ←</span>
+        </a>
+        <a class="pt soon" href="#model">
+          <span class="pt-row"><span class="pt-n">02</span><span class="pt-st" data-k="p2s">قيد التطوير</span></span>
+          <h3 data-k="p2t">نموذج ذكاء اصطناعي عُماني</h3>
+          <p data-k="p2d">نموذج لغوي نملكه بالكامل، يتقن اللغة العربية الرسمية وأسلوب المراسلات الحكومية العُمانية.</p>
+          <span class="pt-go" data-k="p2g">تعرّف على النموذج ←</span>
+        </a>
+      </div>
       <div class="top">
         <div>
-          <span class="blabel" data-k="b1">منتجنا</span>
+          <span class="blabel" data-k="b2">المنتج الأول · متاح الآن</span>
           <h2 class="h1like" data-k="h1">مساعد الموظف الذكي</h2>
           <p class="lead" data-k="lead">ذكاء اصطناعي عربي يعمل داخل شبكة جهتك، بدون إنترنت. يصيغ المراسلات الرسمية ويطابقها مع القرارات والتعاميم، ولا تخرج أي بيانات من الجهة.</p>
         </div>
@@ -574,7 +603,7 @@ dd{margin-bottom:12px}
 <script>
 {
 const en={
-br:"TGTEC",fb:"TGTEC",n6:"About",n8:"Solution",n9:"Security",s0:"Security & privacy",s1:"Security first",s2:"The entity's data never leaves it",s3:"The system runs on the entity's own servers with no internet connection, so no document is sent to outside services.",s4:"Internal archiving",s5:"Drafts and files are kept in an archive inside the entity's network, under its own permissions.",x0:"An Omani tech company",x1:"Secure AI for government entities",x2:"We build AI that runs inside the entity's own network with no internet, so data never leaves it. Our first product: the Smart Employee Assistant.",x3:"Discover the solution",x4:"Contact us",a0:"About us",a1:"Omani technology that protects government data",a2:"TGTEC is the technology brand of Tajalla Trading & Contracting, based in Dhofar. It was founded by Mohammed Ahmed Al-Mashani, a civil servant who saw first-hand how much time official correspondence takes, and built a smart assistant that runs inside the entity with no internet and keeps its data confidential.",a3:"Our vision",a4:"To be the leading Omani provider of secure AI for the government sector.",a5:"Our mission",a6:"Arabic AI tools that run locally and save employees time without compromising data confidentiality.",a7:"Our values",a8:"Integrity, data protection, quality and innovation.",b1:"Our product",f1:"Tajalla Trading & Contracting. Dhofar, Sultanate of Oman.",f2:"Company",f3:"About us",f4:"Security & privacy",f5:"Contact us",f6:"Product",f7:"Smart Employee Assistant",f10:"Features",f8:"How it works",f9:"Contact",n1:"Features",n4:"Features",d0:"Try the system",d1:"A demo that imitates how the assistant works, using ready templates. The real version runs on a local AI model inside the entity.",d2:"Smart Employee Assistant",d3:"Works offline",d4:"Type",d5:"Addressed to",d6:"Subject",d7:"Details",d8:"Draft it",d9:"Copy text",c_a:"Formal administrative Arabic",c_b:"No conflict with approved circulars in the archive",c_c:"Draft saved to the local archive",k5:"Email",n2:"How it works",n3:"Contact",
+br:"TGTEC",fb:"TGTEC",n6:"About",n8:"Solution",n9:"Security",s0:"Security & privacy",s1:"Security first",s2:"The entity's data never leaves it",s3:"The system runs on the entity's own servers with no internet connection, so no document is sent to outside services.",s4:"Internal archiving",s5:"Drafts and files are kept in an archive inside the entity's network, under its own permissions.",x0:"An Omani tech company",x1:"Secure AI for government entities",x2:"We build AI that runs inside the entity's own network with no internet, so data never leaves it. Our first product: the Smart Employee Assistant.",x3:"Discover the solution",x4:"Contact us",a0:"About us",a1:"Omani technology that protects government data",a2:"TGTEC is the technology brand of Tajalla Trading & Contracting, based in Dhofar. It was founded by Mohammed Ahmed Al-Mashani, a civil servant who saw first-hand how much time official correspondence takes, and built a smart assistant that runs inside the entity with no internet and keeps its data confidential.",a3:"Our vision",a4:"To be the leading Omani provider of secure AI for the government sector.",a5:"Our mission",a6:"Arabic AI tools that run locally and save employees time without compromising data confidentiality.",a7:"Our values",a8:"Integrity, data protection, quality and innovation.",b1:"Our products",b2:"Product one · Available now",p1s:"Available now",p1t:"Smart Employee Assistant",p1d:"Drafts official correspondence and checks it against decisions and circulars, inside the entity's network with no internet.",p1g:"Features →",p2s:"In development",p2t:"An Omani AI model",p2d:"A language model we fully own, fluent in formal Arabic and the style of Omani government correspondence.",p2g:"Discover the model →",f1:"Tajalla Trading & Contracting. Dhofar, Sultanate of Oman.",f2:"Company",f3:"About us",f4:"Security & privacy",f5:"Contact us",f6:"Product",f7:"Smart Employee Assistant",f10:"Features",f8:"How it works",f9:"Contact",n1:"Features",n4:"Features",d0:"Try the system",d1:"A demo that imitates how the assistant works, using ready templates. The real version runs on a local AI model inside the entity.",d2:"Smart Employee Assistant",d3:"Works offline",d4:"Type",d5:"Addressed to",d6:"Subject",d7:"Details",d8:"Draft it",d9:"Copy text",c_a:"Formal administrative Arabic",c_b:"No conflict with approved circulars in the archive",c_c:"Draft saved to the local archive",k5:"Email",n2:"How it works",n3:"Contact",
 h1:"Smart Employee Assistant",
 lead:"Arabic AI that runs inside your organization's network, with no internet. It drafts official correspondence, checks it against decisions and circulars, and no data ever leaves the entity.",
 c1:"Request a presentation",c2:"Features",
