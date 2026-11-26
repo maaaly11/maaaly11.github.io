@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/png;base64,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">
+<style>[hidden]{display:none!important}html,body{margin:0}img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<title>معدّات تجتك</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Readex+Pro:wght@500;700&display=swap">
+<style>
+/* Layout: sticky header with tabs over a single working column; dashboard = KPI row, chart + cost split, then tables. */
+:root{
+  --bg:#ffffff; --surface:#f4f4f5; --raised:#ffffff; --line:#e2e2e6; --ink:#0b0b0c; --muted:#62626a;
+  --accent:#e4002b; --accent-soft:#fde7eb; --ok:#1f8a4c; --ok-soft:#e3f4ea; --warn:#a86200; --warn-soft:#fdf0dc;
+  --seg-op:#0b0b0c; --seg-drv:#8b8b93; --seg-mnt:#d08a1c;
+  --display:"Readex Pro","IBM Plex Sans Arabic",system-ui,sans-serif;
+  --body:"IBM Plex Sans Arabic",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r:10px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f0f11; --surface:#18181b; --raised:#1f1f23; --line:#2c2c31; --ink:#f2f2f3; --muted:#a3a3ab;
+  --accent:#ff3b5c; --accent-soft:#3a1219; --ok:#3ecf7d; --ok-soft:#10301f; --warn:#f2b04a; --warn-soft:#3a2a10;
+  --seg-op:#e8e8ea; --seg-drv:#77777f; --seg-mnt:#f2b04a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f0f11; --surface:#18181b; --raised:#1f1f23; --line:#2c2c31; --ink:#f2f2f3; --muted:#a3a3ab;
+  --accent:#ff3b5c; --accent-soft:#3a1219; --ok:#3ecf7d; --ok-soft:#10301f; --warn:#f2b04a; --warn-soft:#3a2a10;
+  --seg-op:#e8e8ea; --seg-drv:#77777f; --seg-mnt:#f2b04a; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.6 var(--body);direction:rtl}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance}
+h2{font-size:20px} h3{font-size:16px}
+button,input,select,textarea{font:inherit;color:inherit}
+.num{font-variant-numeric:tabular-nums}
+.muted{color:var(--muted)}
+
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{width:36px;height:36px;border-radius:8px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:20px;position:relative}
+.logo::after{content:"";position:absolute;top:8px;left:50%;width:5px;height:5px;margin-left:-2px;border-radius:50%;background:var(--accent);box-shadow:-7px 0 0 var(--accent)}
+.brand b{font-family:var(--display);font-size:17px;display:block;line-height:1.2}
+.brand small{color:var(--muted);font-size:12px}
+.period{display:flex;align-items:center;gap:8px}
+.period select{min-height:40px;padding:0 10px;border:1px solid var(--line);border-radius:8px;background:var(--raised)}
+.tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding-bottom:0}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;border:0;background:transparent;padding:10px 14px;min-height:44px;cursor:pointer;color:var(--muted);font-weight:500;border-bottom:3px solid transparent}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent);font-weight:600}
+.tab:focus-visible,.btn:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible,.row:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+main{padding-block:20px 80px;display:flex;flex-direction:column;gap:20px}
+.view[hidden]{display:none}
+.view{display:flex;flex-direction:column;gap:20px}
+#dashBody,#maintBody{display:flex;flex-direction:column;gap:20px}
+.vhead{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.vhead p{margin:2px 0 0;color:var(--muted);font-size:14px}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:42px;padding:0 16px;border-radius:8px;border:1px solid var(--line);background:var(--raised);cursor:pointer;font-weight:600;white-space:nowrap}
+.btn:hover{border-color:var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{filter:brightness(.93)}
+.btn.ghost{background:transparent}
+.btn.danger{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 45%,transparent);background:transparent}
+.btn.danger.armed{background:var(--accent);color:#fff}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+
+.banner{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 14px;border-radius:var(--r);background:var(--warn-soft);color:var(--ink);border:1px solid color-mix(in srgb,var(--warn) 35%,transparent)}
+.banner b{color:var(--warn)}
+.note{font-size:13px;color:var(--muted)}
+
+/* KPIs */
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.kpi{background:var(--surface);border-radius:var(--r);padding:16px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.kpi span{font-size:13px;color:var(--muted)}
+.kpi b{font-family:var(--display);font-size:clamp(22px,2.6vw,30px);font-variant-numeric:tabular-nums;line-height:1.25}
+.kpi small{font-size:13px;color:var(--muted)}
+.kpi.lead{background:var(--ink);color:var(--bg)}
+.kpi.lead span,.kpi.lead small{color:inherit;opacity:.72}
+
+.grid2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:20px}
+.panel{background:var(--raised);border:1px solid var(--line);border-radius:var(--r);padding:18px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.panel-h{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.panel-h small{color:var(--muted);font-size:13px}
+
+/* chart */
+.chart svg{display:block;width:100%;height:auto}
+.chart .bar-r{fill:var(--accent)}
+.chart .grid-l{stroke:var(--line);stroke-width:1}
+.chart text{fill:var(--muted);font:11px var(--body)}
+.chart .val{fill:var(--ink);font-weight:600}
+
+/* cost split */
+.split{display:flex;height:16px;border-radius:999px;overflow:hidden;background:var(--surface)}
+.split i{display:block;height:100%}
+.legend{display:flex;flex-direction:column;gap:8px;margin:0;padding:0;list-style:none}
+.legend li{display:grid;grid-template-columns:12px 1fr auto auto;gap:10px;align-items:center;font-size:14px}
+.legend li i{width:12px;height:12px;border-radius:3px}
+.legend li span:last-child{color:var(--muted);font-size:13px;min-width:3.2em;text-align:start}
+.legend .total{border-top:1px solid var(--line);padding-top:8px;font-weight:600}
+
+/* tables */
+.tscroll{overflow-x:auto;margin-inline:-4px}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th{font-size:12px;font-weight:600;color:var(--muted);text-align:start;padding:8px 10px;border-bottom:2px solid var(--ink);white-space:nowrap}
+td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:middle;white-space:nowrap}
+td.name{white-space:normal;min-width:9em}
+td.name small{display:block;color:var(--muted);font-size:12px}
+tbody tr.click{cursor:pointer}
+tbody tr.click:hover td{background:var(--surface)}
+
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.pill.ok{background:var(--ok-soft);color:var(--ok)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+.pill.bad{background:var(--accent-soft);color:var(--accent)}
+.pill.neutral{background:var(--surface);color:var(--muted)}
+.flag{color:var(--accent);font-weight:600}
+
+/* list rows (shifts, maintenance) */
+.list{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--raised)}
+.row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 16px;padding:14px 16px;border-bottom:1px solid var(--line);cursor:pointer;text-align:start;background:transparent;border-inline:0;border-top:0;width:100%}
+.row:last-child{border-bottom:0}
+.row:hover{background:var(--surface)}
+.row .t{font-weight:600;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.row .s{color:var(--muted);font-size:13px}
+.row .m{display:flex;gap:14px;align-items:center;justify-content:flex-end;flex-wrap:wrap;font-variant-numeric:tabular-nums;font-size:14px}
+.row .m b{font-family:var(--display);font-size:16px}
+.row .m span{white-space:nowrap}
+.day{padding:8px 16px;background:var(--surface);font-size:12px;font-weight:600;color:var(--muted);border-bottom:1px solid var(--line)}
+
+/* cards (equipment, drivers) */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:14px}
+.card{background:var(--raised);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:flex;flex-direction:column;gap:12px;cursor:pointer;text-align:start;width:100%}
+.card:hover{border-color:var(--ink)}
+.card-h{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.card-h small{display:block;color:var(--muted);font-size:13px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.stats div{background:var(--surface);border-radius:8px;padding:8px 10px}
+.stats span{display:block;font-size:12px;color:var(--muted)}
+.stats b{font-variant-numeric:tabular-nums;font-size:15px}
+.meter{height:6px;border-radius:999px;background:var(--surface);overflow:hidden}
+.meter i{display:block;height:100%;background:var(--ok)}
+.meter.warn i{background:var(--warn)} .meter.bad i{background:var(--accent)}
+.svc{display:flex;justify-content:space-between;gap:8px;font-size:13px;color:var(--muted)}
+
+.empty{border:1.5px dashed var(--line);border-radius:var(--r);padding:28px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px}
+.empty p{margin:0;color:var(--muted);max-width:36em}
+.loading{color:var(--muted);font-size:14px}
+
+/* filters */
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filters select{min-height:40px;padding:0 10px;border:1px solid var(--line);border-radius:8px;background:var(--raised);max-width:100%}
+
+/* sheet (form) */
+.overlay{position:fixed;inset:0;z-index:50;background:color-mix(in srgb,#000 45%,transparent);display:flex;align-items:flex-end;justify-content:center}
+@media (min-width:720px){.overlay{align-items:center;padding:24px}}
+.sheet{background:var(--bg);width:min(640px,100%);max-height:calc(100% - env(safe-area-inset-top,0px) - 12px);overflow:auto;border-radius:16px 16px 0 0;padding:20px max(16px,env(safe-area-inset-right,0px)) calc(20px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));display:flex;flex-direction:column;gap:16px}
+@media (min-width:720px){.sheet{border-radius:16px;padding:24px}}
+.sheet-h{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.x{width:40px;height:40px;border-radius:8px;border:1px solid var(--line);background:transparent;cursor:pointer;font-size:20px;line-height:1}
+form.f{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 14px}
+.fld{display:flex;flex-direction:column;gap:5px;min-width:0}
+.fld.full{grid-column:1/-1}
+.fld label{font-size:13px;font-weight:600}
+.fld label i{font-style:normal;color:var(--accent)}
+.fld input,.fld select,.fld textarea{min-height:44px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--raised);width:100%}
+.fld textarea{min-height:72px;resize:vertical}
+.fld small{font-size:12px;color:var(--muted)}
+.sep{grid-column:1/-1;font-size:12px;font-weight:600;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;margin-top:2px}
+.calc{grid-column:1/-1;display:flex;gap:16px;flex-wrap:wrap;background:var(--surface);border-radius:8px;padding:12px 14px;font-size:14px}
+.calc b{font-variant-numeric:tabular-nums}
+.err{grid-column:1/-1;color:var(--accent);font-size:14px;font-weight:600;margin:0}
+.f-actions{grid-column:1/-1;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;padding-top:4px}
+.f-actions .actions{margin-inline-start:auto}
+.toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:999px;font-weight:600;z-index:60;font-size:14px}
+
+@media (max-width:900px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.grid2{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){form.f{grid-template-columns:minmax(0,1fr)}.brand small{display:none}.row{grid-template-columns:minmax(0,1fr)}.row .m{justify-content:flex-start}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <div class="bar">
+      <div class="brand"><div class="logo" aria-hidden="true">ت</div><div><b>إدارة المعدات</b><small>تجتك TGTEC · البيانات على هذا الجهاز</small></div></div>
+      <div class="period">
+        <label for="period" class="muted" style="font-size:13px">الفترة</label>
+        <select id="period">
+          <option value="month">هذا الشهر</option>
+          <option value="last">الشهر الماضي</option>
+          <option value="7">آخر 7 أيام</option>
+          <option value="30">آخر 30 يوماً</option>
+          <option value="year">هذه السنة</option>
+          <option value="all">كل الفترات</option>
+        </select>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="أقسام النظام">
+      <button class="tab" role="tab" data-tab="dash" aria-selected="true">لوحة المتابعة</button>
+      <button class="tab" role="tab" data-tab="shifts" aria-selected="false">الورديات والتشغيل</button>
+      <button class="tab" role="tab" data-tab="equip" aria-selected="false">المعدات</button>
+      <button class="tab" role="tab" data-tab="drivers" aria-selected="false">السائقون</button>
+      <button class="tab" role="tab" data-tab="maint" aria-selected="false">الصيانة</button>
+      <button class="tab" role="tab" data-tab="settings" aria-selected="false">الإعدادات</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+  <div id="demoBanner" class="banner" hidden>
+    <div><b>بيانات تجريبية</b> · تعرض الشاشة الآن أمثلة للتجربة. احذفها قبل إدخال بياناتك الحقيقية.</div>
+    <button class="btn danger" id="clearDemo" type="button">حذف البيانات التجريبية</button>
+  </div>
+  <p id="netNote" class="note" hidden>تعذّر الوصول إلى البيانات حتى الآن. ستظهر تلقائياً عند عودة الاتصال.</p>
+
+  <!-- Dashboard -->
+  <section class="view" id="v-dash">
+    <div class="vhead"><div><h2>لوحة المتابعة</h2><p id="periodLabel">—</p></div>
+      <div class="actions wr"><button class="btn primary" data-new="shift" type="button">+ تسجيل وردية</button></div></div>
+    <div id="dashBody"><p class="loading">جارٍ تحميل البيانات…</p></div>
+  </section>
+
+  <!-- Shifts -->
+  <section class="view" id="v-shifts" hidden>
+    <div class="vhead"><div><h2>الورديات والتشغيل</h2><p>كل وردية: المعدة، السائق، ساعات التشغيل، والوقود.</p></div>
+      <div class="actions"><button class="btn" id="exportCsv" type="button" hidden>تصدير CSV</button><button class="btn primary wr" data-new="shift" type="button">+ تسجيل وردية</button></div></div>
+    <div class="filters"><label class="muted" for="fEq" hidden>المعدة</label><select id="fEq" aria-label="تصفية حسب المعدة"></select><select id="fDrv" aria-label="تصفية حسب السائق"></select></div>
+    <div id="shiftsBody"><p class="loading">جارٍ التحميل…</p></div>
+  </section>
+
+  <!-- Equipment -->
+  <section class="view" id="v-equip" hidden>
+    <div class="vhead"><div><h2>المعدات</h2><p>عداد الساعات، والاستهلاك المتوقع، وموعد الصيانة القادمة لكل معدة.</p></div>
+      <div class="actions wr"><button class="btn primary" data-new="equip" type="button">+ إضافة معدة</button></div></div>
+    <div id="equipBody"><p class="loading">جارٍ التحميل…</p></div>
+  </section>
+
+  <!-- Drivers -->
+  <section class="view" id="v-drivers" hidden>
+    <div class="vhead"><div><h2>السائقون والمشغّلون</h2><p>ساعات عمل كل سائق في الفترة المختارة.</p></div>
+      <div class="actions wr"><button class="btn primary" data-new="driver" type="button">+ إضافة سائق</button></div></div>
+    <div id="driversBody"><p class="loading">جارٍ التحميل…</p></div>
+  </section>
+
+  <!-- Maintenance -->
+  <section class="view" id="v-maint" hidden>
+    <div class="vhead"><div><h2>الصيانة</h2><p>المواعيد القادمة حسب عداد الساعات، وسجل الصيانة وتكاليفها.</p></div>
+      <div class="actions wr"><button class="btn primary" data-new="maint" type="button">+ تسجيل صيانة</button></div></div>
+    <div id="maintBody"><p class="loading">جارٍ التحميل…</p></div>
+  </section>
+
+  <!-- Settings -->
+  <section class="view" id="v-settings" hidden>
+    <div class="vhead"><div><h2>الإعدادات</h2><p>تُستخدم في حساب تكلفة الوقود وتنبيهات الصيانة.</p></div></div>
+    <div class="panel" style="max-width:640px">
+      <form class="f" id="settingsForm">
+        <div class="fld"><label for="setFuel">سعر لتر الوقود (ر.ع)</label><input id="setFuel" type="number" step="0.001" min="0" inputmode="decimal"><small>يُحفظ مع كل وردية وقت تسجيلها.</small></div>
+        <div class="fld"><label for="setSoon">التنبيه قبل موعد الصيانة بـ (ساعة)</label><input id="setSoon" type="number" step="1" min="0" inputmode="numeric"></div>
+        <div class="fld"><label for="setHigh">تنبيه الاستهلاك المرتفع عند تجاوز المتوقع بـ (%)</label><input id="setHigh" type="number" step="1" min="0" inputmode="numeric"></div>
+        <p class="err" id="setErr" hidden></p>
+        <div class="f-actions"><div class="actions"><button class="btn primary wr" type="submit">حفظ الإعدادات</button></div></div>
+      </form>
+    </div>
+    <div class="panel" style="max-width:640px">
+      <div class="panel-h"><h3>النسخ الاحتياطي</h3></div>
+      <p class="muted" style="margin:0">بيانات النظام محفوظة على هذا الجهاز وفي هذا المتصفح فقط. نزّل نسخة احتياطية بانتظام، واستعدها على أي جهاز آخر لنقل البيانات إليه.</p>
+      <div class="actions"><button class="btn" id="backupBtn" type="button">تنزيل نسخة احتياطية</button><label class="btn" for="restoreFile">استعادة من نسخة</label><input id="restoreFile" type="file" accept=".json,application/json" hidden></div>
+      <p class="err" id="restoreErr" hidden></p>
+    </div>
+  </section>
+</main>
+
+<div class="overlay" id="overlay" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <div class="sheet-h"><h2 id="sheetTitle">—</h2><button class="x" type="button" id="sheetClose" aria-label="إغلاق">×</button></div>
+    <div id="sheetBody"></div>
+  </div>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+(() => {
+"use strict";
+const $ = s => document.querySelector(s);
+const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const num = v => { const n = typeof v === "number" ? v : parseFloat(String(v ?? "").replace(",", ".")); return Number.isFinite(n) ? n : null; };
+const f0 = n => (n ?? 0).toLocaleString("en-US", {maximumFractionDigits: 0});
+const f1 = n => (n ?? 0).toLocaleString("en-US", {minimumFractionDigits: 1, maximumFractionDigits: 1});
+const f3 = n => (n ?? 0).toLocaleString("en-US", {minimumFractionDigits: 3, maximumFractionDigits: 3});
+const today = () => { const d = new Date(); return iso(d); };
+const iso = d => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+const AR_MONTHS = ["يناير","فبراير","مارس","أبريل","مايو","يونيو","يوليو","أغسطس","سبتمبر","أكتوبر","نوفمبر","ديسمبر"];
+const AR_DAYS = ["الأحد","الإثنين","الثلاثاء","الأربعاء","الخميس","الجمعة","السبت"];
+const fmtDate = s => { if (!s) return "—"; const [y, m, d] = s.split("-").map(Number); const dt = new Date(y, m - 1, d); return AR_DAYS[dt.getDay()] + " " + d + " " + AR_MONTHS[m - 1] + " " + y; };
+const EQ_TYPES = ["حفّار","شيول (لودر)","بلدوزر","جريدر","رافعة","شاحنة قلّاب","خلّاطة خرسانة","مضخة خرسانة","مولّد كهرباء","رصّاصة (مدحلة)","صهريج مياه","مركبة خفيفة"];
+const STATUS = {active: ["عاملة", "ok"], maint: ["في الصيانة", "warn"], idle: ["متوقفة", "neutral"]};
+const MAINT_KINDS = {service: "صيانة دورية", repair: "إصلاح عطل", tires: "إطارات", other: "أخرى"};
+
+const S = {
+  db: null, canWrite: true, downloads: null,
+  equipment: new Map(), drivers: new Map(), shifts: [], maint: [],
+  settings: {fuelPrice: 0.258, dueSoon: 25, highPct: 25},
+  got: {equipment: false, drivers: false, shifts: false, maint: false},
+  tab: "dash", period: "month", fEq: "", fDrv: ""
+};
+try { const t = localStorage.getItem("eq.tab"); if (t) S.tab = t; const p = localStorage.getItem("eq.period"); if (p) S.period = p; } catch (e) {}
+
+/* ---------- period ---------- */
+function periodRange(p) {
+  const now = new Date(); const y = now.getFullYear(), m = now.getMonth();
+  if (p === "month") return [iso(new Date(y, m, 1)), iso(new Date(y, m + 1, 0)), "هذا الشهر · " + AR_MONTHS[m] + " " + y];
+  if (p === "last") { const a = new Date(y, m - 1, 1); return [iso(a), iso(new Date(y, m, 0)), "الشهر الماضي · " + AR_MONTHS[a.getMonth()] + " " + a.getFullYear()]; }
+  if (p === "7" || p === "30") { const n = +p; const a = new Date(y, m, now.getDate() - n + 1); return [iso(a), iso(now), "آخر " + n + " " + (n === 7 ? "أيام" : "يوماً")]; }
+  if (p === "year") return [y + "-01-01", y + "-12-31", "سنة " + y];
+  return ["0000-01-01", "9999-12-31", "كل الفترات"];
+}
+const inPeriod = d => { const [a, b] = periodRange(S.period); return d >= a && d <= b; };
+
+/* ---------- calculations ---------- */
+function timeHours(st, en) {
+  if (!/^\d{1,2}:\d{2}$/.test(st || "") || !/^\d{1,2}:\d{2}$/.test(en || "")) return null;
+  const [h1, m1] = st.split(":").map(Number), [h2, m2] = en.split(":").map(Number);
+  let mins = (h2 * 60 + m2) - (h1 * 60 + m1); if (mins <= 0) mins += 1440;
+  return mins / 60;
+}
+function shiftHours(s) {
+  const a = num(s.startMeter), b = num(s.endMeter);
+  if (a != null && b != null && b >= a) return {h: b - a, src: "meter"};
+  const t = timeHours(s.startTime, s.endTime);
+  return t != null ? {h: t, src: "time"} : {h: 0, src: "none"};
+}
+function shiftCost(s) {
+  const eq = S.equipment.get(s.equipmentId) || {}; const dr = S.drivers.get(s.driverId) || {};
+  const h = shiftHours(s).h, L = num(s.fuelLiters) || 0;
+  const price = num(s.fuelPrice) ?? S.settings.fuelPrice;
+  const fuel = L * price, op = h * (num(eq.hourlyCost) || 0), drv = h * (num(dr.hourlyWage) || 0);
+  return {h, L, fuel, op, drv, total: fuel + op + drv};
+}
+function currentMeter(eqId) {
+  const eq = S.equipment.get(eqId) || {}; let m = num(eq.meter) || 0;
+  for (const s of S.shifts) if (s.equipmentId === eqId) { const e = num(s.endMeter); if (e != null && e > m) m = e; }
+  for (const r of S.maint) if (r.equipmentId === eqId) { const e = num(r.meterAt); if (e != null && e > m) m = e; }
+  return m;
+}
+function service(eqId) {
+  const eq = S.equipment.get(eqId) || {}; const interval = num(eq.serviceInterval) || 250;
+  let last = num(eq.lastServiceMeter) || 0;
+  for (const r of S.maint) if (r.equipmentId === eqId && r.kind === "service") { const v = num(r.meterAt); if (v != null && v > last) last = v; }
+  const cur = currentMeter(eqId), next = last + interval, left = next - cur;
+  const soon = Math.max(S.settings.dueSoon || 0, 0);
+  const st = left < 0 ? "bad" : left <= soon ? "warn" : "ok";
+  return {interval, last, cur, next, left, st, used: Math.min(1, Math.max(0, (cur - last) / interval))};
+}
+function svcPill(sv) {
+  if (sv.st === "bad") return `<span class="pill bad">متأخرة ${f0(-sv.left)} س</span>`;
+  if (sv.st === "warn") return `<span class="pill warn">بعد ${f0(sv.left)} س</span>`;
+  return `<span class="pill ok">بعد ${f0(sv.left)} س</span>`;
+}
+function rateFlag(eqId, rate) {
+  const eq = S.equipment.get(eqId) || {}; const exp = num(eq.fuelRate);
+  return exp && rate && rate > exp * (1 + (S.settings.highPct || 0) / 100);
+}
+function aggregate() {
+  const per = new Map();
+  for (const id of S.equipment.keys()) per.set(id, {h: 0, L: 0, fuel: 0, op: 0, drv: 0, mnt: 0, n: 0});
+  const drvH = new Map(); let T = {h: 0, L: 0, fuel: 0, op: 0, drv: 0, mnt: 0, n: 0};
+  for (const s of S.shifts) {
+    if (!inPeriod(s.date || "")) continue;
+    const c = shiftCost(s); const p = per.get(s.equipmentId) || {h: 0, L: 0, fuel: 0, op: 0, drv: 0, mnt: 0, n: 0};
+    for (const k of ["h", "L", "fuel", "op", "drv"]) { p[k] += c[k]; T[k] += c[k]; }
+    p.n++; T.n++; per.set(s.equipmentId, p);
+    drvH.set(s.driverId, (drvH.get(s.driverId) || 0) + c.h);
+  }
+  for (const r of S.maint) {
+    if (!inPeriod(r.date || "")) continue;
+    const c = num(r.cost) || 0; const p = per.get(r.equipmentId); if (p) p.mnt += c; T.mnt += c;
+  }
+  T.total = T.fuel + T.op + T.drv + T.mnt;
+  return {per, T, drvH};
+}
+
+/* ---------- rendering ---------- */
+const ready = () => S.got.equipment && S.got.shifts && S.got.drivers && S.got.maint;
+function render() {
+  const [, , label] = periodRange(S.period); $("#periodLabel").textContent = label;
+  const anyDemo = [...S.equipment.values(), ...S.drivers.values(), ...S.shifts, ...S.maint].some(d => d.demo);
+  $("#demoBanner").hidden = !anyDemo || !S.canWrite;
+  document.querySelectorAll(".wr").forEach(el => el.hidden = !S.canWrite);
+  if (!ready()) return;
+  renderDash(); renderShifts(); renderEquip(); renderDrivers(); renderMaint();
+}
+function eqName(id) { const e = S.equipment.get(id); return e ? e.name : "معدة محذوفة"; }
+function emptyBox(title, text, btn) {
+  return `<div class="empty"><h3>${title}</h3><p>${text}</p>${btn && S.canWrite ? btn : ""}</div>`;
+}
+function renderDash() {
+  const el = $("#dashBody");
+  if (!S.equipment.size) { el.innerHTML = emptyBox("لا توجد معدات بعد", "ابدأ بإضافة أول معدة: نوعها، وعداد الساعات الحالي، والاستهلاك المتوقع للوقود. بعدها سجّل الورديات لتظهر الساعات والتكاليف هنا.", `<button class="btn primary" data-new="equip" type="button">+ إضافة أول معدة</button><button class="btn" id="loadDemo" type="button">عرض بيانات تجريبية</button>`); return; }
+  const {per, T} = aggregate();
+  const rate = T.h ? T.L / T.h : 0;
+  const alerts = [...S.equipment.keys()].map(id => ({id, sv: service(id)})).filter(x => x.sv.st !== "ok").sort((a, b) => a.sv.left - b.sv.left);
+  const parts = [["الوقود", T.fuel, "var(--accent)"], ["تشغيل المعدات", T.op, "var(--seg-op)"], ["أجور السائقين", T.drv, "var(--seg-drv)"], ["الصيانة", T.mnt, "var(--seg-mnt)"]];
+  const tot = T.total || 0;
+  let html = `<div class="kpis">
+    <div class="kpi lead"><span>ساعات التشغيل</span><b>${f1(T.h)}</b><small>${f0(T.n)} وردية</small></div>
+    <div class="kpi"><span>الوقود المستهلك</span><b>${f0(T.L)} <small>لتر</small></b><small>${f3(T.fuel)} ر.ع</small></div>
+    <div class="kpi"><span>متوسط الاستهلاك</span><b>${f1(rate)} <small>لتر/ساعة</small></b><small>لكل المعدات</small></div>
+    <div class="kpi"><span>إجمالي التكلفة</span><b>${f3(tot)} <small>ر.ع</small></b><small>${T.h ? f3(tot / T.h) + " ر.ع للساعة" : "—"}</small></div>
+  </div>
+  <div class="grid2">
+    <div class="panel chart"><div class="panel-h"><h3>ساعات التشغيل</h3><small id="chartNote"></small></div>${chartSvg()}</div>
+    <div class="panel"><div class="panel-h"><h3>توزيع التكلفة</h3><small>ر.ع</small></div>
+      <div class="split" role="img" aria-label="توزيع التكلفة">${tot ? parts.map(p => p[1] > 0 ? `<i style="width:${(p[1] / tot * 100).toFixed(2)}%;background:${p[2]}"></i>` : "").join("") : ""}</div>
+      <ul class="legend">${parts.map(p => `<li><i style="background:${p[2]}"></i><span>${p[0]}</span><b class="num">${f3(p[1])}</b><span class="num">${tot ? Math.round(p[1] / tot * 100) + "%" : "—"}</span></li>`).join("")}
+        <li class="total"><i></i><span>الإجمالي</span><b class="num">${f3(tot)}</b><span></span></li></ul>
+    </div>
+  </div>`;
+  html += `<div class="panel"><div class="panel-h"><h3>تنبيهات الصيانة</h3><small>حسب عداد الساعات</small></div>${alerts.length ? `<div class="tscroll"><table><thead><tr><th>المعدة</th><th>العداد الحالي</th><th>الصيانة القادمة عند</th><th>الحالة</th></tr></thead><tbody>${alerts.map(a => `<tr class="click" data-edit-equip="${esc(a.id)}"><td class="name">${esc(eqName(a.id))}<small>${esc(S.equipment.get(a.id).type || "")}</small></td><td class="num">${f0(a.sv.cur)} س</td><td class="num">${f0(a.sv.next)} س</td><td>${svcPill(a.sv)}</td></tr>`).join("")}</tbody></table></div>` : `<p class="muted" style="margin:0">لا توجد صيانة متأخرة أو قريبة.</p>`}</div>`;
+  const rows = [...S.equipment.entries()].map(([id, e]) => ({id, e, p: per.get(id) || {h: 0, L: 0, fuel: 0, op: 0, drv: 0, mnt: 0, n: 0}, sv: service(id)})).sort((a, b) => b.p.h - a.p.h);
+  html += `<div class="panel"><div class="panel-h"><h3>أداء المعدات</h3><small>في الفترة المختارة</small></div><div class="tscroll"><table><thead><tr><th>المعدة</th><th>ساعات</th><th>وقود (لتر)</th><th>لتر/ساعة</th><th>المتوقع</th><th>التكلفة (ر.ع)</th><th>ر.ع/ساعة</th><th>الصيانة</th></tr></thead><tbody>${rows.map(r => {
+    const tc = r.p.fuel + r.p.op + r.p.drv + r.p.mnt; const rt = r.p.h ? r.p.L / r.p.h : 0; const hi = rateFlag(r.id, rt);
+    return `<tr class="click" data-edit-equip="${esc(r.id)}"><td class="name">${esc(r.e.name)}<small>${esc(r.e.type || "")}${r.e.code ? " · " + esc(r.e.code) : ""}</small></td><td>${f1(r.p.h)}</td><td>${f0(r.p.L)}</td><td class="${hi ? "flag" : ""}">${r.p.h ? f1(rt) : "—"}${hi ? " ▲" : ""}</td><td class="muted">${num(r.e.fuelRate) ? f1(num(r.e.fuelRate)) : "—"}</td><td>${f3(tc)}</td><td>${r.p.h ? f3(tc / r.p.h) : "—"}</td><td>${svcPill(r.sv)}</td></tr>`;
+  }).join("")}</tbody></table></div><p class="note" style="margin:0">▲ استهلاك أعلى من المتوقع بأكثر من ${f0(S.settings.highPct)}%.</p></div>`;
+  el.innerHTML = html;
+}
+function chartSvg() {
+  const [a, b] = periodRange(S.period);
+  const ds = S.shifts.filter(s => inPeriod(s.date || ""));
+  let start = a, end = b;
+  if (S.period === "all") { if (!ds.length) return `<p class="muted">لا توجد ورديات بعد.</p>`; const ks = ds.map(s => s.date).sort(); start = ks[0]; end = ks[ks.length - 1]; }
+  const sd = new Date(start + "T00:00:00"), ed = new Date(end + "T00:00:00");
+  const days = Math.round((ed - sd) / 864e5) + 1;
+  const monthly = days > 62;
+  const buckets = [];
+  if (monthly) { const c = new Date(sd.getFullYear(), sd.getMonth(), 1); while (c <= ed) { buckets.push({k: c.getFullYear() + "-" + String(c.getMonth() + 1).padStart(2, "0"), l: AR_MONTHS[c.getMonth()].slice(0, 3), v: 0}); c.setMonth(c.getMonth() + 1); } }
+  else { const c = new Date(sd); while (c <= ed) { buckets.push({k: iso(c), l: String(c.getDate()), v: 0}); c.setDate(c.getDate() + 1); } }
+  const idx = new Map(buckets.map((x, i) => [x.k, i]));
+  for (const s of ds) { const k = monthly ? s.date.slice(0, 7) : s.date; const i = idx.get(k); if (i != null) buckets[i].v += shiftHours(s).h; }
+  const max = Math.max(1, ...buckets.map(x => x.v)); const stepY = [1, 2, 5, 10, 15, 20, 25, 50, 100, 200, 250, 500, 1000, 2000, 5000].find(v => v * 4 >= max) || Math.ceil(max / 4); const nice = stepY * 4;
+  const W = 700, H = 200, L = 34, R = 8, Tp = 14, B = 24; const pw = W - L - R, ph = H - Tp - B;
+  const n = buckets.length, bw = pw / n, gap = Math.min(6, bw * 0.25);
+  const step = n > 16 ? Math.ceil(n / 10) : 1;
+  let g = "";
+  for (let i = 0; i <= 4; i++) { const v = nice * i / 4, y = Tp + ph - ph * v / nice; g += `<line class="grid-l" x1="${L}" x2="${W - R}" y1="${y.toFixed(1)}" y2="${y.toFixed(1)}"/><text x="${L - 6}" y="${(y + 4).toFixed(1)}" text-anchor="end">${f0(v)}</text>`; }
+  // RTL reading: first day on the right
+  buckets.forEach((x, i) => {
+    const bh = ph * x.v / nice; const xr = W - R - (i + 1) * bw + gap / 2; const y = Tp + ph - bh;
+    if (x.v > 0) g += `<rect class="bar-r" x="${xr.toFixed(1)}" y="${y.toFixed(1)}" width="${Math.max(1, bw - gap).toFixed(1)}" height="${bh.toFixed(1)}" rx="2"><title>${esc(x.k)}: ${f1(x.v)} ساعة</title></rect>`;
+    if (i % step === 0) g += `<text x="${(xr + (bw - gap) / 2).toFixed(1)}" y="${H - 6}" text-anchor="middle">${esc(x.l)}</text>`;
+  });
+  setTimeout(() => { const n2 = $("#chartNote"); if (n2) n2.textContent = monthly ? "ساعات لكل شهر" : "ساعات لكل يوم"; });
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="ساعات التشغيل في الفترة">${g}</svg>`;
+}
+function fillFilters() {
+  const eqs = [...S.equipment.entries()].sort((a, b) => (a[1].name || "").localeCompare(b[1].name || "", "ar"));
+  const drs = [...S.drivers.entries()].sort((a, b) => (a[1].name || "").localeCompare(b[1].name || "", "ar"));
+  $("#fEq").innerHTML = `<option value="">كل المعدات</option>` + eqs.map(([id, e]) => `<option value="${esc(id)}"${S.fEq === id ? " selected" : ""}>${esc(e.name)}</option>`).join("");
+  $("#fDrv").innerHTML = `<option value="">كل السائقين</option>` + drs.map(([id, d]) => `<option value="${esc(id)}"${S.fDrv === id ? " selected" : ""}>${esc(d.name)}</option>`).join("");
+}
+function filteredShifts() {
+  return S.shifts.filter(s => inPeriod(s.date || "") && (!S.fEq || s.equipmentId === S.fEq) && (!S.fDrv || s.driverId === S.fDrv))
+    .sort((a, b) => (b.date || "").localeCompare(a.date || "") || (b.startTime || "").localeCompare(a.startTime || ""));
+}
+function renderShifts() {
+  fillFilters();
+  const el = $("#shiftsBody"); const list = filteredShifts();
+  $("#exportCsv").hidden = !S.downloads || !list.length;
+  if (!S.equipment.size) { el.innerHTML = emptyBox("أضف معدة أولاً", "تُسجَّل كل وردية على معدة محددة. أضف المعدات من قسم «المعدات».", `<button class="btn primary" data-new="equip" type="button">+ إضافة معدة</button>`); return; }
+  if (!list.length) { el.innerHTML = emptyBox("لا توجد ورديات في هذه الفترة", "سجّل وردية: المعدة، اسم السائق، بداية الوردية ونهايتها أو قراءة العداد، والوقود المضاف.", `<button class="btn primary" data-new="shift" type="button">+ تسجيل وردية</button>`); return; }
+  let html = `<div class="list">`, lastDay = "";
+  const tot = {h: 0, L: 0, c: 0};
+  for (const s of list) {
+    if (s.date !== lastDay) { lastDay = s.date; html += `<div class="day">${esc(fmtDate(s.date))}</div>`; }
+    const c = shiftCost(s), hs = shiftHours(s), rt = c.h ? c.L / c.h : 0, hi = rateFlag(s.equipmentId, rt);
+    tot.h += c.h; tot.L += c.L; tot.c += c.total;
+    const timeTxt = s.startTime && s.endTime ? `${esc(s.startTime)} ← ${esc(s.endTime)}` : "";
+    const meterTxt = num(s.startMeter) != null && num(s.endMeter) != null ? `عداد ${f0(num(s.startMeter))} ← ${f0(num(s.endMeter))}` : "";
+    html += `<button class="row" type="button" data-edit-shift="${esc(s._id)}">
+      <div><div class="t">${esc(eqName(s.equipmentId))}${hi ? ` <span class="pill bad">استهلاك مرتفع</span>` : ""}</div>
+      <div class="s">السائق: ${esc(s.driverName || (S.drivers.get(s.driverId) || {}).name || "—")}${s.site ? " · " + esc(s.site) : ""}</div>
+      <div class="s num">${[timeTxt, meterTxt].filter(Boolean).join(" · ")}</div></div>
+      <div class="m"><span><b>${f1(c.h)}</b> س</span><span><b>${f0(c.L)}</b> لتر</span><span class="muted">${c.h ? f1(rt) + " ل/س" : "—"}</span><span><b>${f3(c.total)}</b> ر.ع</span></div>
+    </button>`;
+  }
+  html += `</div><p class="note">المجموع: ${f1(tot.h)} ساعة · ${f0(tot.L)} لتر · ${f3(tot.c)} ر.ع (بدون الصيانة)</p>`;
+  el.innerHTML = html;
+}
+function renderEquip() {
+  const el = $("#equipBody");
+  if (!S.equipment.size) { el.innerHTML = emptyBox("لا توجد معدات بعد", "أضف المعدة بنوعها ورقمها، وقراءة عداد الساعات الحالية، والاستهلاك المتوقع للوقود، وفترة الصيانة الدورية.", `<button class="btn primary" data-new="equip" type="button">+ إضافة أول معدة</button>`); return; }
+  const {per} = aggregate();
+  const items = [...S.equipment.entries()].sort((a, b) => (a[1].name || "").localeCompare(b[1].name || "", "ar"));
+  el.innerHTML = `<div class="cards">${items.map(([id, e]) => {
+    const p = per.get(id) || {h: 0, L: 0}; const sv = service(id); const st = STATUS[e.status] || STATUS.active; const rt = p.h ? p.L / p.h : 0;
+    return `<button class="card" type="button" data-edit-equip="${esc(id)}">
+      <div class="card-h"><div><h3>${esc(e.name)}</h3><small>${esc(e.type || "")}${e.code ? " · " + esc(e.code) : ""}</small></div><span class="pill ${st[1]}">${st[0]}</span></div>
+      <div class="stats"><div><span>العداد</span><b>${f0(sv.cur)} س</b></div><div><span>ساعات الفترة</span><b>${f1(p.h)}</b></div><div><span>لتر/ساعة</span><b class="${rateFlag(id, rt) ? "flag" : ""}">${p.h ? f1(rt) : "—"}</b></div></div>
+      <div class="meter ${sv.st === "ok" ? "" : sv.st}"><i style="width:${(sv.used * 100).toFixed(0)}%"></i></div>
+      <div class="svc"><span>الصيانة القادمة عند ${f0(sv.next)} س</span>${svcPill(sv)}</div>
+    </button>`; }).join("")}</div>`;
+}
+function renderDrivers() {
+  const el = $("#driversBody");
+  if (!S.drivers.size) { el.innerHTML = emptyBox("لا يوجد سائقون بعد", "أضف السائقين والمشغّلين بأسمائهم. يمكنك أيضاً كتابة اسم سائق جديد مباشرة عند تسجيل الوردية.", `<button class="btn primary" data-new="driver" type="button">+ إضافة سائق</button>`); return; }
+  const {drvH} = aggregate();
+  const cnt = new Map(); const eqs = new Map();
+  for (const s of S.shifts) if (inPeriod(s.date || "")) { cnt.set(s.driverId, (cnt.get(s.driverId) || 0) + 1); if (!eqs.has(s.driverId)) eqs.set(s.driverId, new Set()); eqs.get(s.driverId).add(eqName(s.equipmentId)); }
+  const items = [...S.drivers.entries()].sort((a, b) => (drvH.get(b[0]) || 0) - (drvH.get(a[0]) || 0));
+  el.innerHTML = `<div class="panel"><div class="tscroll"><table><thead><tr><th>السائق</th><th>ساعات الفترة</th><th>الورديات</th><th>الأجر للساعة</th><th>الأجر في الفترة (ر.ع)</th><th>المعدات</th></tr></thead><tbody>${items.map(([id, d]) => {
+    const h = drvH.get(id) || 0; const w = num(d.hourlyWage);
+    return `<tr class="click" data-edit-driver="${esc(id)}"><td class="name">${esc(d.name)}<small>${esc(d.phone || "")}</small></td><td>${f1(h)}</td><td>${f0(cnt.get(id) || 0)}</td><td>${w ? f3(w) : "—"}</td><td>${w ? f3(w * h) : "—"}</td><td class="name"><small>${esc([...(eqs.get(id) || [])].join("، ") || "—")}</small></td></tr>`;
+  }).join("")}</tbody></table></div></div>`;
+}
+function renderMaint() {
+  const el = $("#maintBody");
+  if (!S.equipment.size) { el.innerHTML = emptyBox("أضف معدة أولاً", "مواعيد الصيانة تُحسب من عداد ساعات كل معدة.", ""); return; }
+  const due = [...S.equipment.keys()].map(id => ({id, sv: service(id)})).sort((a, b) => a.sv.left - b.sv.left);
+  let html = `<div class="panel"><div class="panel-h"><h3>مواعيد الصيانة القادمة</h3><small>الأقرب أولاً</small></div><div class="tscroll"><table><thead><tr><th>المعدة</th><th>آخر صيانة عند</th><th>كل</th><th>العداد الحالي</th><th>القادمة عند</th><th>الحالة</th></tr></thead><tbody>${due.map(x => `<tr class="click" data-new-maint-for="${esc(x.id)}"><td class="name">${esc(eqName(x.id))}<small>${esc(S.equipment.get(x.id).type || "")}</small></td><td>${f0(x.sv.last)} س</td><td>${f0(x.sv.interval)} س</td><td>${f0(x.sv.cur)} س</td><td>${f0(x.sv.next)} س</td><td>${svcPill(x.sv)}</td></tr>`).join("")}</tbody></table></div><p class="note" style="margin:0">اضغط على المعدة لتسجيل صيانة لها.</p></div>`;
+  const recs = S.maint.filter(r => inPeriod(r.date || "")).sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+  const sum = recs.reduce((t, r) => t + (num(r.cost) || 0), 0);
+  html += `<div class="panel-h"><h3>سجل الصيانة</h3><small>${f0(recs.length)} عملية · ${f3(sum)} ر.ع</small></div>`;
+  html += recs.length ? `<div class="list">${recs.map(r => `<button class="row" type="button" data-edit-maint="${esc(r._id)}"><div><div class="t">${esc(eqName(r.equipmentId))} <span class="pill ${r.kind === "service" ? "ok" : r.kind === "repair" ? "bad" : "neutral"}">${esc(MAINT_KINDS[r.kind] || "أخرى")}</span></div><div class="s">${esc(fmtDate(r.date))}${num(r.meterAt) != null ? " · عند " + f0(num(r.meterAt)) + " س" : ""}</div>${r.description ? `<div class="s">${esc(r.description)}</div>` : ""}</div><div class="m"><span><b>${f3(num(r.cost) || 0)}</b> ر.ع</span></div></button>`).join("")}</div>`
+    : emptyBox("لا توجد عمليات صيانة في هذه الفترة", "سجّل الصيانة الدورية لتُحسب المواعيد القادمة تلقائياً، وسجّل الإصلاحات لتدخل في تكلفة المعدة.", `<button class="btn primary" data-new="maint" type="button">+ تسجيل صيانة</button>`);
+  el.innerHTML = html;
+}
+
+/* ---------- forms ---------- */
+let sheetSubmit = null, armedDelete = null;
+function openSheet(title, bodyHtml, onSubmit, onDelete) {
+  $("#sheetTitle").textContent = title; $("#sheetBody").innerHTML = bodyHtml;
+  sheetSubmit = onSubmit; armedDelete = null;
+  const del = $("#sheetBody [data-del]");
+  if (del) del.addEventListener("click", async () => {
+    if (!del.classList.contains("armed")) { del.classList.add("armed"); del.textContent = "اضغط مرة أخرى للتأكيد"; return; }
+    del.disabled = true; try { await onDelete(); closeSheet(); toast("تم الحذف"); } catch (e) { showErr(e); del.disabled = false; }
+  });
+  $("#overlay").hidden = false;
+  const first = $("#sheetBody input, #sheetBody select"); if (first) first.focus({preventScroll: true});
+}
+function closeSheet() { $("#overlay").hidden = true; $("#sheetBody").innerHTML = ""; sheetSubmit = null; }
+function showErr(e) {
+  const p = $("#sheetBody .err"); if (!p) return;
+  p.textContent = typeof e === "string" ? e : e && e.code === "storage" ? "تعذّر الحفظ على هذا الجهاز. تأكد أن المتصفح لا يعمل في وضع التصفح الخاص." : e && e.code === "quota_exceeded" ? "امتلأت مساحة البيانات. احذف سجلات قديمة ثم حاول مرة أخرى." : e && e.code === "invalid_argument" ? "لا تملك صلاحية التعديل على هذه البيانات." : "تعذّر الحفظ. تحقّق من الاتصال وحاول مرة أخرى.";
+  p.hidden = false;
+}
+const fld = (id, label, input, cls = "", hint = "") => `<div class="fld ${cls}"><label for="${id}">${label}</label>${input}${hint ? `<small>${hint}</small>` : ""}</div>`;
+const inp = (id, val, attrs = "") => `<input id="${id}" value="${esc(val ?? "")}" ${attrs}>`;
+const footer = (isEdit, label) => `<p class="err" hidden></p><div class="f-actions">${isEdit && S.canWrite ? `<button class="btn danger" type="button" data-del>حذف</button>` : ""}<div class="actions"><button class="btn ghost" type="button" data-cancel>إلغاء</button>${S.canWrite ? `<button class="btn primary" type="submit">${label}</button>` : ""}</div></div>`;
+const val = id => { const e = document.getElementById(id); return e ? e.value.trim() : ""; };
+const numOrNull = id => { const v = val(id); return v === "" ? null : num(v); };
+const clean = o => { const r = {}; for (const [k, v] of Object.entries(o)) if (v !== null && v !== undefined && v !== "") r[k] = v; return r; };
+
+function equipForm(id) {
+  const e = id ? S.equipment.get(id) || {} : {status: "active", serviceInterval: 250};
+  openSheet(id ? "تعديل معدة" : "إضافة معدة", `<form class="f" id="sf">
+    ${fld("eName", "اسم المعدة <i>*</i>", inp("eName", e.name, 'required placeholder="مثال: حفّار كاتربيلر 320"'), "full")}
+    ${fld("eType", "النوع <i>*</i>", inp("eType", e.type, 'required list="eqTypes" placeholder="اختر أو اكتب"') + `<datalist id="eqTypes">${EQ_TYPES.map(t => `<option value="${t}">`).join("")}</datalist>`)}
+    ${fld("eCode", "رقم المعدة / اللوحة", inp("eCode", e.code))}
+    ${fld("eStatus", "الحالة", `<select id="eStatus">${Object.entries(STATUS).map(([k, v]) => `<option value="${k}"${e.status === k ? " selected" : ""}>${v[0]}</option>`).join("")}</select>`)}
+    ${fld("eMeter", "قراءة عداد الساعات الحالية", inp("eMeter", e.meter, 'type="number" step="0.1" min="0" inputmode="decimal"'), "", "تتحدّث تلقائياً من الورديات.")}
+    <div class="sep">الوقود والتكلفة</div>
+    ${fld("eFuel", "الاستهلاك المتوقع (لتر/ساعة)", inp("eFuel", e.fuelRate, 'type="number" step="0.1" min="0" inputmode="decimal"'), "", "للتنبيه عند الاستهلاك المرتفع.")}
+    ${fld("eCost", "تكلفة تشغيل الساعة (ر.ع)", inp("eCost", e.hourlyCost, 'type="number" step="0.001" min="0" inputmode="decimal"'), "", "استهلاك أو إيجار المعدة، بدون الوقود.")}
+    <div class="sep">الصيانة الدورية</div>
+    ${fld("eInt", "الصيانة كل (ساعة)", inp("eInt", e.serviceInterval, 'type="number" step="1" min="1" inputmode="numeric"'))}
+    ${fld("eLast", "آخر صيانة عند قراءة (ساعة)", inp("eLast", e.lastServiceMeter, 'type="number" step="0.1" min="0" inputmode="decimal"'))}
+    ${footer(!!id, id ? "حفظ التعديلات" : "إضافة المعدة")}</form>`,
+    async () => {
+      if (!val("eName") || !val("eType")) throw "اكتب اسم المعدة ونوعها.";
+      const doc = clean({name: val("eName"), type: val("eType"), code: val("eCode"), status: val("eStatus"), meter: numOrNull("eMeter"), fuelRate: numOrNull("eFuel"), hourlyCost: numOrNull("eCost"), serviceInterval: numOrNull("eInt"), lastServiceMeter: numOrNull("eLast"), demo: e.demo || null});
+      doc.updatedAt = new Date().toISOString();
+      if (id) await S.db.collection("equipment").doc(id).set(doc); else await S.db.collection("equipment").add(doc);
+    },
+    id ? async () => {
+      if (S.shifts.some(s => s.equipmentId === id) || S.maint.some(r => r.equipmentId === id)) throw "لا يمكن حذف معدة لها ورديات أو صيانة مسجّلة. غيّر حالتها إلى «متوقفة» بدلاً من ذلك.";
+      await S.db.collection("equipment").doc(id).delete();
+    } : null);
+}
+function driverForm(id) {
+  const d = id ? S.drivers.get(id) || {} : {};
+  openSheet(id ? "تعديل سائق" : "إضافة سائق", `<form class="f" id="sf">
+    ${fld("dName", "اسم السائق <i>*</i>", inp("dName", d.name, 'required autocomplete="off"'), "full")}
+    ${fld("dPhone", "رقم الهاتف", inp("dPhone", d.phone, 'type="tel" inputmode="tel" dir="ltr"'))}
+    ${fld("dWage", "الأجر للساعة (ر.ع)", inp("dWage", d.hourlyWage, 'type="number" step="0.001" min="0" inputmode="decimal"'), "", "اختياري: يدخل في تكلفة التشغيل.")}
+    ${fld("dNotes", "ملاحظات", `<textarea id="dNotes">${esc(d.notes || "")}</textarea>`, "full")}
+    ${footer(!!id, id ? "حفظ التعديلات" : "إضافة السائق")}</form>`,
+    async () => {
+      if (!val("dName")) throw "اكتب اسم السائق.";
+      const doc = clean({name: val("dName"), phone: val("dPhone"), hourlyWage: numOrNull("dWage"), notes: val("dNotes"), demo: d.demo || null});
+      if (id) await S.db.collection("drivers").doc(id).set(doc); else await S.db.collection("drivers").add(doc);
+    },
+    id ? async () => { if (S.shifts.some(s => s.driverId === id)) throw "لا يمكن حذف سائق له ورديات مسجّلة."; await S.db.collection("drivers").doc(id).delete(); } : null);
+}
+function shiftForm(id) {
+  const s = id ? S.shifts.find(x => x._id === id) || {} : {date: today(), equipmentId: S.fEq || ""};
+  const eqs = [...S.equipment.entries()].filter(([k, e]) => e.status !== "idle" || k === s.equipmentId).sort((a, b) => (a[1].name || "").localeCompare(b[1].name || "", "ar"));
+  const drs = [...S.drivers.entries()].sort((a, b) => (a[1].name || "").localeCompare(b[1].name || "", "ar"));
+  openSheet(id ? "تعديل وردية" : "تسجيل وردية", `<form class="f" id="sf">
+    ${fld("sEq", "المعدة <i>*</i>", `<select id="sEq" required><option value="">اختر المعدة</option>${eqs.map(([k, e]) => `<option value="${esc(k)}"${s.equipmentId === k ? " selected" : ""}>${esc(e.name)}${e.code ? " · " + esc(e.code) : ""}</option>`).join("")}</select>`)}
+    ${fld("sDrv", "اسم السائق <i>*</i>", `<select id="sDrv" required><option value="">اختر السائق</option>${drs.map(([k, d]) => `<option value="${esc(k)}"${s.driverId === k ? " selected" : ""}>${esc(d.name)}</option>`).join("")}<option value="__new">+ سائق جديد…</option></select>`)}
+    <div class="fld full" id="newDrvWrap" hidden><label for="sNewDrv">اسم السائق الجديد</label><input id="sNewDrv" autocomplete="off"></div>
+    ${fld("sDate", "التاريخ <i>*</i>", inp("sDate", s.date, 'type="date" required'))}
+    ${fld("sSite", "الموقع / المشروع", inp("sSite", s.site, 'placeholder="مثال: طريق صلالة – طاقة"'))}
+    <div class="sep">وقت الوردية</div>
+    ${fld("sStart", "بداية الوردية", inp("sStart", s.startTime, 'type="time"'))}
+    ${fld("sEnd", "نهاية الوردية", inp("sEnd", s.endTime, 'type="time"'))}
+    <div class="sep">عداد الساعات (أدق في حساب التشغيل)</div>
+    ${fld("sM1", "قراءة العداد عند البداية", inp("sM1", s.startMeter, 'type="number" step="0.1" min="0" inputmode="decimal"'))}
+    ${fld("sM2", "قراءة العداد عند النهاية", inp("sM2", s.endMeter, 'type="number" step="0.1" min="0" inputmode="decimal"'))}
+    <div class="sep">الوقود</div>
+    ${fld("sFuel", "الوقود المضاف (لتر)", inp("sFuel", s.fuelLiters, 'type="number" step="0.1" min="0" inputmode="decimal"'))}
+    ${fld("sNotes", "ملاحظات", inp("sNotes", s.notes))}
+    <div class="calc" id="sCalc" aria-live="polite"></div>
+    ${footer(!!id, id ? "حفظ التعديلات" : "حفظ الوردية")}</form>`,
+    async () => {
+      const eqId = val("sEq"); let drvId = val("sDrv"); const date = val("sDate");
+      if (!eqId || !drvId || !date) throw "اختر المعدة والسائق والتاريخ.";
+      const draft = {startTime: val("sStart"), endTime: val("sEnd"), startMeter: numOrNull("sM1"), endMeter: numOrNull("sM2")};
+      if (draft.startMeter != null && draft.endMeter != null && draft.endMeter < draft.startMeter) throw "قراءة العداد عند النهاية أقل من البداية.";
+      if (shiftHours(draft).src === "none") throw "أدخل وقت البداية والنهاية، أو قراءتي العداد.";
+      let drvName;
+      if (drvId === "__new") {
+        drvName = val("sNewDrv"); if (!drvName) throw "اكتب اسم السائق الجديد.";
+        const ref = await S.db.collection("drivers").add({name: drvName}); drvId = ref.id;
+      } else drvName = (S.drivers.get(drvId) || {}).name || "";
+      const doc = clean({equipmentId: eqId, driverId: drvId, driverName: drvName, date, site: val("sSite"), ...draft, fuelLiters: numOrNull("sFuel"), notes: val("sNotes"),
+        fuelPrice: id && num(s.fuelPrice) != null ? num(s.fuelPrice) : S.settings.fuelPrice, hours: +shiftHours(draft).h.toFixed(2), demo: s.demo || null});
+      doc.updatedAt = new Date().toISOString();
+      if (id) await S.db.collection("shifts").doc(id).set(doc); else await S.db.collection("shifts").add(doc);
+    },
+    id ? async () => S.db.collection("shifts").doc(id).delete() : null);
+  const upd = () => {
+    const d = {equipmentId: val("sEq"), driverId: val("sDrv"), startTime: val("sStart"), endTime: val("sEnd"), startMeter: numOrNull("sM1"), endMeter: numOrNull("sM2"), fuelLiters: numOrNull("sFuel"), fuelPrice: id ? s.fuelPrice : undefined};
+    const hs = shiftHours(d); const c = shiftCost(d); const rt = c.h ? c.L / c.h : 0; const hi = rateFlag(d.equipmentId, rt);
+    const exp = num((S.equipment.get(d.equipmentId) || {}).fuelRate);
+    $("#sCalc").innerHTML = hs.src === "none" ? `<span class="muted">أدخل وقت الوردية أو قراءتي العداد لحساب الساعات.</span>`
+      : `<span>الساعات: <b>${f1(c.h)}</b> <small class="muted">(${hs.src === "meter" ? "من العداد" : "من الوقت"})</small></span><span>الاستهلاك: <b class="${hi ? "flag" : ""}">${c.h && c.L ? f1(rt) + " لتر/ساعة" : "—"}</b>${exp ? ` <small class="muted">المتوقع ${f1(exp)}</small>` : ""}</span><span>التكلفة: <b>${f3(c.total)} ر.ع</b></span>`;
+  };
+  $("#sDrv").addEventListener("change", () => { $("#newDrvWrap").hidden = val("sDrv") !== "__new"; if (val("sDrv") === "__new") $("#sNewDrv").focus(); });
+  $("#sEq").addEventListener("change", () => { if (!id && val("sEq") && !val("sM1")) { const m = currentMeter(val("sEq")); if (m) $("#sM1").value = m; } upd(); });
+  ["sStart", "sEnd", "sM1", "sM2", "sFuel", "sDrv"].forEach(k => $("#" + k).addEventListener("input", upd));
+  if (!id && s.equipmentId) { const m = currentMeter(s.equipmentId); if (m) $("#sM1").value = m; }
+  upd();
+}
+function maintForm(id, forEq) {
+  const r = id ? S.maint.find(x => x._id === id) || {} : {date: today(), kind: "service", equipmentId: forEq || ""};
+  if (!id && r.equipmentId) r.meterAt = currentMeter(r.equipmentId) || "";
+  const eqs = [...S.equipment.entries()].sort((a, b) => (a[1].name || "").localeCompare(b[1].name || "", "ar"));
+  openSheet(id ? "تعديل صيانة" : "تسجيل صيانة", `<form class="f" id="sf">
+    ${fld("mEq", "المعدة <i>*</i>", `<select id="mEq" required><option value="">اختر المعدة</option>${eqs.map(([k, e]) => `<option value="${esc(k)}"${r.equipmentId === k ? " selected" : ""}>${esc(e.name)}</option>`).join("")}</select>`)}
+    ${fld("mKind", "نوع الصيانة", `<select id="mKind">${Object.entries(MAINT_KINDS).map(([k, v]) => `<option value="${k}"${r.kind === k ? " selected" : ""}>${v}</option>`).join("")}</select>`, "", "الصيانة الدورية تعيد حساب الموعد القادم.")}
+    ${fld("mDate", "التاريخ <i>*</i>", inp("mDate", r.date, 'type="date" required'))}
+    ${fld("mMeter", "قراءة العداد (ساعة)", inp("mMeter", r.meterAt, 'type="number" step="0.1" min="0" inputmode="decimal"'))}
+    ${fld("mCost", "التكلفة (ر.ع)", inp("mCost", r.cost, 'type="number" step="0.001" min="0" inputmode="decimal"'))}
+    ${fld("mVendor", "الورشة / المنفّذ", inp("mVendor", r.vendor))}
+    ${fld("mDesc", "الوصف", `<textarea id="mDesc" placeholder="مثال: تغيير زيت المحرك والفلاتر">${esc(r.description || "")}</textarea>`, "full")}
+    ${footer(!!id, id ? "حفظ التعديلات" : "حفظ الصيانة")}</form>`,
+    async () => {
+      if (!val("mEq") || !val("mDate")) throw "اختر المعدة والتاريخ.";
+      const doc = clean({equipmentId: val("mEq"), kind: val("mKind"), date: val("mDate"), meterAt: numOrNull("mMeter"), cost: numOrNull("mCost"), vendor: val("mVendor"), description: val("mDesc"), demo: r.demo || null});
+      doc.updatedAt = new Date().toISOString();
+      if (id) await S.db.collection("maintenance").doc(id).set(doc); else await S.db.collection("maintenance").add(doc);
+    },
+    id ? async () => S.db.collection("maintenance").doc(id).delete() : null);
+  $("#mEq").addEventListener("change", () => { if (!id && !val("mMeter")) { const m = currentMeter(val("mEq")); if (m) $("#mMeter").value = m; } });
+}
+
+/* ---------- events ---------- */
+function setTab(t) {
+  S.tab = t; try { localStorage.setItem("eq.tab", t); } catch (e) {}
+  document.querySelectorAll(".tab").forEach(b => b.setAttribute("aria-selected", String(b.dataset.tab === t)));
+  document.querySelectorAll(".view").forEach(v => v.hidden = v.id !== "v-" + t);
+}
+document.querySelectorAll(".tab").forEach(b => b.addEventListener("click", () => setTab(b.dataset.tab)));
+$("#period").value = S.period;
+$("#period").addEventListener("change", e => { S.period = e.target.value; try { localStorage.setItem("eq.period", S.period); } catch (x) {} render(); });
+$("#fEq").addEventListener("change", e => { S.fEq = e.target.value; renderShifts(); });
+$("#fDrv").addEventListener("change", e => { S.fDrv = e.target.value; renderShifts(); });
+document.addEventListener("click", e => {
+  if (e.target.closest("#loadDemo")) return loadDemo();
+  const t = e.target.closest("[data-new],[data-edit-equip],[data-edit-shift],[data-edit-driver],[data-edit-maint],[data-new-maint-for],[data-cancel]");
+  if (!t) return;
+  if (t.hasAttribute("data-cancel")) return closeSheet();
+  if (!S.db) return toast("البيانات غير متاحة في هذا العرض");
+  const n = t.dataset.new;
+  if (n === "equip") return equipForm();
+  if (n === "driver") return driverForm();
+  if (n === "shift") return S.equipment.size ? shiftForm() : equipForm();
+  if (n === "maint") return S.equipment.size ? maintForm() : equipForm();
+  if (t.dataset.editEquip) return equipForm(t.dataset.editEquip);
+  if (t.dataset.editShift) return shiftForm(t.dataset.editShift);
+  if (t.dataset.editDriver) return driverForm(t.dataset.editDriver);
+  if (t.dataset.editMaint) return maintForm(t.dataset.editMaint);
+  if (t.dataset.newMaintFor && S.canWrite) return maintForm(null, t.dataset.newMaintFor);
+});
+document.addEventListener("submit", async e => {
+  if (e.target.id === "sf") {
+    e.preventDefault(); if (!sheetSubmit) return;
+    const btn = e.target.querySelector('button[type="submit"]'); if (btn) btn.disabled = true;
+    try { await sheetSubmit(); closeSheet(); toast("تم الحفظ"); } catch (err) { showErr(err); if (btn) btn.disabled = false; }
+  }
+  if (e.target.id === "settingsForm") {
+    e.preventDefault();
+    if (!S.db) return toast("البيانات غير متاحة في هذا العرض");
+    const fp = num($("#setFuel").value), ds = num($("#setSoon").value), hp = num($("#setHigh").value);
+    const er = $("#setErr");
+    if (fp == null || fp < 0) { er.textContent = "اكتب سعر لتر الوقود."; er.hidden = false; return; }
+    er.hidden = true;
+    try { await S.db.doc("settings/main").set({fuelPrice: fp, dueSoon: ds ?? 25, highPct: hp ?? 25}); toast("تم حفظ الإعدادات"); }
+    catch (x) { er.textContent = "تعذّر الحفظ. تحقّق من الصلاحية والاتصال."; er.hidden = false; }
+  }
+});
+$("#sheetClose").addEventListener("click", closeSheet);
+$("#overlay").addEventListener("click", e => { if (e.target.id === "overlay") closeSheet(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("#overlay").hidden) closeSheet(); });
+let toastT; function toast(m) { const t = $("#toast"); t.textContent = m; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => t.hidden = true, 2200); }
+
+$("#clearDemo").addEventListener("click", async e => {
+  const b = e.currentTarget;
+  if (!b.classList.contains("armed")) { b.classList.add("armed"); b.textContent = "اضغط مرة أخرى للتأكيد"; return; }
+  b.disabled = true; b.textContent = "جارٍ الحذف…";
+  const jobs = [];
+  for (const [k, v] of S.equipment) if (v.demo) jobs.push(["equipment", k]);
+  for (const [k, v] of S.drivers) if (v.demo) jobs.push(["drivers", k]);
+  for (const s of S.shifts) if (s.demo) jobs.push(["shifts", s._id]);
+  for (const r of S.maint) if (r.demo) jobs.push(["maintenance", r._id]);
+  try { for (const [c, id] of jobs) await S.db.collection(c).doc(id).delete(); toast("حُذفت البيانات التجريبية"); }
+  catch (x) { toast("تعذّر حذف بعض البيانات"); }
+  b.disabled = false; b.classList.remove("armed"); b.textContent = "حذف البيانات التجريبية";
+});
+
+$("#exportCsv").addEventListener("click", async () => {
+  if (!S.downloads) return;
+  const rows = [["التاريخ", "المعدة", "النوع", "السائق", "الموقع", "بداية", "نهاية", "عداد البداية", "عداد النهاية", "الساعات", "الوقود (لتر)", "لتر/ساعة", "تكلفة الوقود", "تكلفة التشغيل", "أجر السائق", "الإجمالي (ر.ع)", "ملاحظات"]];
+  for (const s of filteredShifts().slice().reverse()) {
+    const c = shiftCost(s), e = S.equipment.get(s.equipmentId) || {};
+    rows.push([s.date, e.name || "", e.type || "", s.driverName || "", s.site || "", s.startTime || "", s.endTime || "", s.startMeter ?? "", s.endMeter ?? "", c.h.toFixed(2), c.L, c.h ? (c.L / c.h).toFixed(2) : "", c.fuel.toFixed(3), c.op.toFixed(3), c.drv.toFixed(3), c.total.toFixed(3), s.notes || ""]);
+  }
+  const csv = "﻿" + rows.map(r => r.map(v => { const t = String(v); return /[",\n]/.test(t) ? '"' + t.replace(/"/g, '""') + '"' : t; }).join(",")).join("\r\n");
+  try { await S.downloads.save({filename: "tgtec-shifts-" + periodRange(S.period)[0].slice(0, 7) + ".csv", data: csv}); }
+  catch (x) { if (x && x.code !== "declined") toast("تعذّر تنزيل الملف هنا"); }
+});
+
+
+/* ---------- local storage (data stays on this device) ---------- */
+const LS_KEY = "tgtec-equipment-v1";
+const LocalDB = (() => {
+  let store = {};
+  const read = () => { try { const v = JSON.parse(localStorage.getItem(LS_KEY) || "{}"); return v && typeof v === "object" ? v : {}; } catch (e) { return {}; } };
+  store = read();
+  const subs = new Map();
+  const persist = () => { try { localStorage.setItem(LS_KEY, JSON.stringify(store)); } catch (e) { throw {code: "storage"}; } };
+  const docSnap = (id, d) => ({id, exists: !!d, data: () => d, metadata: {fromCache: false, hasPendingWrites: false}});
+  const emit = key => (subs.get(key) || []).forEach(f => f());
+  const emitAll = () => subs.forEach(list => list.forEach(f => f()));
+  const on = (key, f) => { if (!subs.has(key)) subs.set(key, []); subs.get(key).push(f); setTimeout(f, 0); return () => {}; };
+  const gen = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+  const docRef = (c, id) => ({id, path: c + "/" + id,
+    set: async d => { (store[c] ||= {})[id] = JSON.parse(JSON.stringify(d)); persist(); emit(c); emit(c + "/" + id); },
+    delete: async () => { if (store[c]) delete store[c][id]; persist(); emit(c); emit(c + "/" + id); },
+    get: async () => docSnap(id, (store[c] || {})[id]),
+    onSnapshot: next => on(c + "/" + id, () => next(docSnap(id, (store[c] || {})[id])))});
+  const coll = c => ({path: c, doc: id => docRef(c, id || gen()),
+    add: async d => { const id = gen(); await docRef(c, id).set(d); return {id}; },
+    onSnapshot: next => on(c, () => { const docs = Object.entries(store[c] || {}).map(([id, d]) => docSnap(id, d)); next({docs, size: docs.length, empty: !docs.length, metadata: {fromCache: false}, docChanges: () => []}); })});
+  window.addEventListener("storage", e => { if (e.key === LS_KEY) { store = read(); emitAll(); } });
+  return {collection: coll, doc: p => { const [c, id] = p.split("/"); return docRef(c, id); },
+    dump: () => JSON.parse(JSON.stringify(store)),
+    replace: obj => { store = obj; persist(); emitAll(); }};
+})();
+const DEMO = {"equipment": {"demo-e1": {"name": "حفّار كاتربيلر 320", "type": "حفّار", "code": "EX-01", "status": "active", "meter": 3940, "fuelRate": 14, "hourlyCost": 6.5, "serviceInterval": 250, "lastServiceMeter": 3700, "demo": true}, "demo-e2": {"name": "شيول كوماتسو WA380", "type": "شيول (لودر)", "code": "LD-02", "status": "active", "meter": 2600, "fuelRate": 12, "hourlyCost": 5, "serviceInterval": 250, "lastServiceMeter": 2540, "demo": true}, "demo-e3": {"name": "شاحنة قلّاب أكتروس", "type": "شاحنة قلّاب", "code": "TR-07", "status": "active", "meter": 9450, "fuelRate": 9, "hourlyCost": 3.5, "serviceInterval": 500, "lastServiceMeter": 9400, "demo": true}, "demo-e4": {"name": "مولّد كهرباء 200 ك.ف.أ", "type": "مولّد كهرباء", "code": "GN-03", "status": "active", "meter": 5900, "fuelRate": 25, "hourlyCost": 2, "serviceInterval": 250, "lastServiceMeter": 5860, "demo": true}}, "drivers": {"demo-d1": {"name": "سالم المعشني", "hourlyWage": 1.25, "demo": true}, "demo-d2": {"name": "خالد الكثيري", "hourlyWage": 1.25, "demo": true}, "demo-d3": {"name": "راجو كومار", "hourlyWage": 0.9, "demo": true}, "demo-d4": {"name": "محمد بيت سعيد", "hourlyWage": 1.1, "demo": true}}, "shifts": {"demo-s001": {"equipmentId": "demo-e1", "driverId": "demo-d1", "driverName": "سالم المعشني", "date": "2026-11-01", "site": "طريق صلالة – طاقة", "startTime": "07:00", "endTime": "16:00", "startMeter": 3940, "endMeter": 3949, "fuelLiters": 115, "fuelPrice": 0.258, "hours": 9, "demo": true}, "demo-s002": {"equipmentId": "demo-e2", "driverId": "demo-d4", "driverName": "محمد بيت سعيد", "date": "2026-11-01", "site": "طريق صلالة – طاقة", "startTime": "06:30", "endTime": "16:00", "startMeter": 2600, "endMeter": 2609.3, "fuelLiters": 100, "fuelPrice": 0.258, "hours": 9.3, "demo": true}, "demo-s003": {"equipmentId": "demo-e3", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-01", "site": "كسارة عوقد", "startTime": "07:00", "endTime": "15:00", "startMeter": 9450, "endMeter": 9457.5, "fuelLiters": 60, "fuelPrice": 0.258, "hours": 7.5, "demo": true}, "demo-s004": {"equipmentId": "demo-e4", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-01", "site": "موقع مشروع ريسوت", "startTime": "06:00", "endTime": "18:00", "startMeter": 5900, "endMeter": 5912.0, "fuelLiters": 310, "fuelPrice": 0.258, "hours": 12.0, "demo": true}, "demo-s005": {"equipmentId": "demo-e2", "driverId": "demo-d2", "driverName": "خالد الكثيري", "date": "2026-11-02", "site": "طريق صلالة – طاقة", "startTime": "07:00", "endTime": "16:00", "startMeter": 2609.3, "endMeter": 2617.8, "fuelLiters": 95, "fuelPrice": 0.258, "hours": 8.5, "demo": true}, "demo-s006": {"equipmentId": "demo-e3", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-02", "site": "كسارة عوقد", "startTime": "07:00", "endTime": "15:00", "startMeter": 9457.5, "endMeter": 9465.3, "fuelLiters": 70, "fuelPrice": 0.258, "hours": 7.8, "demo": true}, "demo-s007": {"equipmentId": "demo-e4", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-02", "site": "موقع مشروع ريسوت", "startTime": "06:00", "endTime": "18:00", "startMeter": 5912.0, "endMeter": 5923.8, "fuelLiters": 300, "fuelPrice": 0.258, "hours": 11.8, "demo": true}, "demo-s008": {"equipmentId": "demo-e1", "driverId": "demo-d1", "driverName": "سالم المعشني", "date": "2026-11-03", "site": "طريق صلالة – طاقة", "startTime": "07:30", "endTime": "17:00", "startMeter": 3949, "endMeter": 3958.0, "fuelLiters": 125, "fuelPrice": 0.258, "hours": 9.0, "demo": true}, "demo-s009": {"equipmentId": "demo-e2", "driverId": "demo-d4", "driverName": "محمد بيت سعيد", "date": "2026-11-03", "site": "طريق صلالة – طاقة", "startTime": "07:00", "endTime": "15:00", "startMeter": 2617.8, "endMeter": 2625.5, "fuelLiters": 95, "fuelPrice": 0.258, "hours": 7.7, "demo": true}, "demo-s010": {"equipmentId": "demo-e3", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-03", "site": "كسارة عوقد", "startTime": "07:00", "endTime": "16:30", "startMeter": 9465.3, "endMeter": 9474.8, "fuelLiters": 80, "fuelPrice": 0.258, "hours": 9.5, "demo": true}, "demo-s011": {"equipmentId": "demo-e4", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-03", "site": "موقع مشروع ريسوت", "startTime": "06:00", "endTime": "18:00", "startMeter": 5923.8, "endMeter": 5935.5, "fuelLiters": 275, "fuelPrice": 0.258, "hours": 11.7, "demo": true}, "demo-s012": {"equipmentId": "demo-e1", "driverId": "demo-d2", "driverName": "خالد الكثيري", "date": "2026-11-04", "site": "طريق صلالة – طاقة", "startTime": "06:30", "endTime": "16:00", "startMeter": 3958.0, "endMeter": 3967.2, "fuelLiters": 125, "fuelPrice": 0.258, "hours": 9.2, "demo": true}, "demo-s013": {"equipmentId": "demo-e2", "driverId": "demo-d4", "driverName": "محمد بيت سعيد", "date": "2026-11-04", "site": "طريق صلالة – طاقة", "startTime": "07:30", "endTime": "15:30", "startMeter": 2625.5, "endMeter": 2633.5, "fuelLiters": 105, "fuelPrice": 0.258, "hours": 8, "demo": true}, "demo-s014": {"equipmentId": "demo-e3", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-04", "site": "كسارة عوقد", "startTime": "06:30", "endTime": "14:30", "startMeter": 9474.8, "endMeter": 9482.5, "fuelLiters": 70, "fuelPrice": 0.258, "hours": 7.7, "demo": true}, "demo-s015": {"equipmentId": "demo-e4", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-04", "site": "موقع مشروع ريسوت", "startTime": "06:00", "endTime": "18:00", "startMeter": 5935.5, "endMeter": 5947.0, "fuelLiters": 315, "fuelPrice": 0.258, "hours": 11.5, "demo": true}, "demo-s016": {"equipmentId": "demo-e2", "driverId": "demo-d2", "driverName": "خالد الكثيري", "date": "2026-11-05", "site": "طريق صلالة – طاقة", "startTime": "07:00", "endTime": "16:30", "startMeter": 2633.5, "endMeter": 2643.0, "fuelLiters": 115, "fuelPrice": 0.258, "hours": 9.5, "demo": true}, "demo-s017": {"equipmentId": "demo-e3", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-05", "site": "كسارة عوقد", "startTime": "07:00", "endTime": "17:00", "startMeter": 9482.5, "endMeter": 9492.3, "fuelLiters": 85, "fuelPrice": 0.258, "hours": 9.8, "demo": true}, "demo-s018": {"equipmentId": "demo-e1", "driverId": "demo-d2", "driverName": "خالد الكثيري", "date": "2026-11-07", "site": "طريق صلالة – طاقة", "startTime": "07:00", "endTime": "15:30", "startMeter": 3967.2, "endMeter": 3975.2, "fuelLiters": 120, "fuelPrice": 0.258, "hours": 8.0, "demo": true}, "demo-s019": {"equipmentId": "demo-e2", "driverId": "demo-d2", "driverName": "خالد الكثيري", "date": "2026-11-07", "site": "طريق صلالة – طاقة", "startTime": "07:00", "endTime": "17:00", "startMeter": 2643.0, "endMeter": 2652.5, "fuelLiters": 125, "fuelPrice": 0.258, "hours": 9.5, "demo": true}, "demo-s020": {"equipmentId": "demo-e4", "driverId": "demo-d4", "driverName": "محمد بيت سعيد", "date": "2026-11-07", "site": "موقع مشروع ريسوت", "startTime": "06:00", "endTime": "18:00", "startMeter": 5947.0, "endMeter": 5958.8, "fuelLiters": 265, "fuelPrice": 0.258, "hours": 11.8, "demo": true}, "demo-s021": {"equipmentId": "demo-e1", "driverId": "demo-d2", "driverName": "خالد الكثيري", "date": "2026-11-08", "site": "طريق صلالة – طاقة", "startTime": "06:30", "endTime": "15:00", "startMeter": 3975.2, "endMeter": 3983.2, "fuelLiters": 115, "fuelPrice": 0.258, "hours": 8.0, "demo": true}, "demo-s022": {"equipmentId": "demo-e2", "driverId": "demo-d4", "driverName": "محمد بيت سعيد", "date": "2026-11-08", "site": "طريق صلالة – طاقة", "startTime": "06:30", "endTime": "15:30", "startMeter": 2652.5, "endMeter": 2661.0, "fuelLiters": 100, "fuelPrice": 0.258, "hours": 8.5, "demo": true}, "demo-s023": {"equipmentId": "demo-e4", "driverId": "demo-d4", "driverName": "محمد بيت سعيد", "date": "2026-11-08", "site": "موقع مشروع ريسوت", "startTime": "06:00", "endTime": "18:00", "startMeter": 5958.8, "endMeter": 5970.8, "fuelLiters": 285, "fuelPrice": 0.258, "hours": 12.0, "demo": true}, "demo-s024": {"equipmentId": "demo-e1", "driverId": "demo-d1", "driverName": "سالم المعشني", "date": "2026-11-09", "site": "طريق صلالة – طاقة", "startTime": "06:30", "endTime": "15:30", "startMeter": 3983.2, "endMeter": 3992.2, "fuelLiters": 115, "fuelPrice": 0.258, "hours": 9, "demo": true}, "demo-s025": {"equipmentId": "demo-e2", "driverId": "demo-d2", "driverName": "خالد الكثيري", "date": "2026-11-09", "site": "طريق صلالة – طاقة", "startTime": "07:00", "endTime": "16:30", "startMeter": 2661.0, "endMeter": 2670.5, "fuelLiters": 105, "fuelPrice": 0.258, "hours": 9.5, "demo": true}, "demo-s026": {"equipmentId": "demo-e3", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-09", "site": "كسارة عوقد", "startTime": "07:00", "endTime": "17:00", "startMeter": 9492.3, "endMeter": 9502.0, "fuelLiters": 95, "fuelPrice": 0.258, "hours": 9.7, "demo": true}, "demo-s027": {"equipmentId": "demo-e4", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-09", "site": "موقع مشروع ريسوت", "startTime": "06:00", "endTime": "18:00", "startMeter": 5970.8, "endMeter": 5982.8, "fuelLiters": 325, "fuelPrice": 0.258, "hours": 12.0, "demo": true}, "demo-s028": {"equipmentId": "demo-e1", "driverId": "demo-d2", "driverName": "خالد الكثيري", "date": "2026-11-10", "site": "طريق صلالة – طاقة", "startTime": "07:00", "endTime": "15:00", "startMeter": 3992.2, "endMeter": 4000.0, "fuelLiters": 100, "fuelPrice": 0.258, "hours": 7.8, "demo": true}, "demo-s029": {"equipmentId": "demo-e2", "driverId": "demo-d2", "driverName": "خالد الكثيري", "date": "2026-11-10", "site": "طريق صلالة – طاقة", "startTime": "07:30", "endTime": "17:30", "startMeter": 2670.5, "endMeter": 2680.3, "fuelLiters": 120, "fuelPrice": 0.258, "hours": 9.8, "demo": true}, "demo-s030": {"equipmentId": "demo-e3", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-10", "site": "كسارة عوقد", "startTime": "07:00", "endTime": "15:30", "startMeter": 9502.0, "endMeter": 9510.5, "fuelLiters": 80, "fuelPrice": 0.258, "hours": 8.5, "demo": true}, "demo-s031": {"equipmentId": "demo-e4", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-10", "site": "موقع مشروع ريسوت", "startTime": "06:00", "endTime": "18:00", "startMeter": 5982.8, "endMeter": 5994.8, "fuelLiters": 315, "fuelPrice": 0.258, "hours": 12.0, "demo": true}, "demo-s032": {"equipmentId": "demo-e1", "driverId": "demo-d2", "driverName": "خالد الكثيري", "date": "2026-11-11", "site": "طريق صلالة – طاقة", "startTime": "07:00", "endTime": "16:00", "startMeter": 4000.0, "endMeter": 4008.8, "fuelLiters": 125, "fuelPrice": 0.258, "hours": 8.8, "demo": true}, "demo-s033": {"equipmentId": "demo-e2", "driverId": "demo-d2", "driverName": "خالد الكثيري", "date": "2026-11-11", "site": "طريق صلالة – طاقة", "startTime": "07:00", "endTime": "15:30", "startMeter": 2680.3, "endMeter": 2688.3, "fuelLiters": 100, "fuelPrice": 0.258, "hours": 8.0, "demo": true}, "demo-s034": {"equipmentId": "demo-e3", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-11", "site": "كسارة عوقد", "startTime": "07:30", "endTime": "16:30", "startMeter": 9510.5, "endMeter": 9519.5, "fuelLiters": 90, "fuelPrice": 0.258, "hours": 9, "demo": true}, "demo-s035": {"equipmentId": "demo-e4", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-11", "site": "موقع مشروع ريسوت", "startTime": "06:00", "endTime": "18:00", "startMeter": 5994.8, "endMeter": 6006.6, "fuelLiters": 310, "fuelPrice": 0.258, "hours": 11.8, "demo": true}, "demo-s036": {"equipmentId": "demo-e1", "driverId": "demo-d1", "driverName": "سالم المعشني", "date": "2026-11-12", "site": "طريق صلالة – طاقة", "startTime": "07:00", "endTime": "16:00", "startMeter": 4008.8, "endMeter": 4017.8, "fuelLiters": 120, "fuelPrice": 0.258, "hours": 9, "demo": true}, "demo-s037": {"equipmentId": "demo-e2", "driverId": "demo-d2", "driverName": "خالد الكثيري", "date": "2026-11-12", "site": "طريق صلالة – طاقة", "startTime": "07:00", "endTime": "15:30", "startMeter": 2688.3, "endMeter": 2696.3, "fuelLiters": 100, "fuelPrice": 0.258, "hours": 8.0, "demo": true}, "demo-s038": {"equipmentId": "demo-e3", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-12", "site": "كسارة عوقد", "startTime": "07:00", "endTime": "17:00", "startMeter": 9519.5, "endMeter": 9529.5, "fuelLiters": 100, "fuelPrice": 0.258, "hours": 10, "demo": true}, "demo-s039": {"equipmentId": "demo-e4", "driverId": "demo-d4", "driverName": "محمد بيت سعيد", "date": "2026-11-12", "site": "موقع مشروع ريسوت", "startTime": "06:00", "endTime": "18:00", "startMeter": 6006.6, "endMeter": 6018.4, "fuelLiters": 295, "fuelPrice": 0.258, "hours": 11.8, "demo": true}, "demo-s040": {"equipmentId": "demo-e1", "driverId": "demo-d1", "driverName": "سالم المعشني", "date": "2026-11-14", "site": "طريق صلالة – طاقة", "startTime": "07:00", "endTime": "15:00", "startMeter": 4017.8, "endMeter": 4025.3, "fuelLiters": 105, "fuelPrice": 0.258, "hours": 7.5, "demo": true}, "demo-s041": {"equipmentId": "demo-e2", "driverId": "demo-d4", "driverName": "محمد بيت سعيد", "date": "2026-11-14", "site": "طريق صلالة – طاقة", "startTime": "07:00", "endTime": "15:30", "startMeter": 2696.3, "endMeter": 2704.8, "fuelLiters": 95, "fuelPrice": 0.258, "hours": 8.5, "demo": true}, "demo-s042": {"equipmentId": "demo-e3", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-14", "site": "كسارة عوقد", "startTime": "07:00", "endTime": "16:30", "startMeter": 9529.5, "endMeter": 9538.5, "fuelLiters": 85, "fuelPrice": 0.258, "hours": 9.0, "demo": true}, "demo-s043": {"equipmentId": "demo-e4", "driverId": "demo-d4", "driverName": "محمد بيت سعيد", "date": "2026-11-14", "site": "موقع مشروع ريسوت", "startTime": "06:00", "endTime": "18:00", "startMeter": 6018.4, "endMeter": 6030.2, "fuelLiters": 265, "fuelPrice": 0.258, "hours": 11.8, "demo": true}, "demo-s044": {"equipmentId": "demo-e1", "driverId": "demo-d1", "driverName": "سالم المعشني", "date": "2026-11-15", "site": "طريق صلالة – طاقة", "startTime": "07:00", "endTime": "16:00", "startMeter": 4025.3, "endMeter": 4034.1, "fuelLiters": 135, "fuelPrice": 0.258, "hours": 8.8, "demo": true}, "demo-s045": {"equipmentId": "demo-e3", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-15", "site": "كسارة عوقد", "startTime": "07:00", "endTime": "16:30", "startMeter": 9538.5, "endMeter": 9547.7, "fuelLiters": 80, "fuelPrice": 0.258, "hours": 9.2, "demo": true}, "demo-s046": {"equipmentId": "demo-e4", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-15", "site": "موقع مشروع ريسوت", "startTime": "06:00", "endTime": "18:00", "startMeter": 6030.2, "endMeter": 6042.2, "fuelLiters": 330, "fuelPrice": 0.258, "hours": 12.0, "demo": true}, "demo-s047": {"equipmentId": "demo-e1", "driverId": "demo-d1", "driverName": "سالم المعشني", "date": "2026-11-16", "site": "طريق صلالة – طاقة", "startTime": "07:30", "endTime": "17:00", "startMeter": 4034.1, "endMeter": 4043.4, "fuelLiters": 130, "fuelPrice": 0.258, "hours": 9.3, "demo": true}, "demo-s048": {"equipmentId": "demo-e2", "driverId": "demo-d2", "driverName": "خالد الكثيري", "date": "2026-11-16", "site": "طريق صلالة – طاقة", "startTime": "07:00", "endTime": "16:30", "startMeter": 2704.8, "endMeter": 2714.3, "fuelLiters": 120, "fuelPrice": 0.258, "hours": 9.5, "demo": true}, "demo-s049": {"equipmentId": "demo-e3", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-16", "site": "كسارة عوقد", "startTime": "07:30", "endTime": "17:00", "startMeter": 9547.7, "endMeter": 9557.2, "fuelLiters": 85, "fuelPrice": 0.258, "hours": 9.5, "demo": true}, "demo-s050": {"equipmentId": "demo-e4", "driverId": "demo-d4", "driverName": "محمد بيت سعيد", "date": "2026-11-16", "site": "موقع مشروع ريسوت", "startTime": "06:00", "endTime": "18:00", "startMeter": 6042.2, "endMeter": 6053.7, "fuelLiters": 310, "fuelPrice": 0.258, "hours": 11.5, "demo": true}, "demo-s051": {"equipmentId": "demo-e1", "driverId": "demo-d1", "driverName": "سالم المعشني", "date": "2026-11-17", "site": "طريق صلالة – طاقة", "startTime": "06:30", "endTime": "15:00", "startMeter": 4043.4, "endMeter": 4051.7, "fuelLiters": 110, "fuelPrice": 0.258, "hours": 8.3, "demo": true}, "demo-s052": {"equipmentId": "demo-e2", "driverId": "demo-d2", "driverName": "خالد الكثيري", "date": "2026-11-17", "site": "طريق صلالة – طاقة", "startTime": "06:30", "endTime": "14:30", "startMeter": 2714.3, "endMeter": 2721.8, "fuelLiters": 140, "fuelPrice": 0.258, "hours": 7.5, "demo": true}, "demo-s053": {"equipmentId": "demo-e3", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-17", "site": "كسارة عوقد", "startTime": "07:30", "endTime": "17:00", "startMeter": 9557.2, "endMeter": 9566.2, "fuelLiters": 80, "fuelPrice": 0.258, "hours": 9.0, "demo": true}, "demo-s054": {"equipmentId": "demo-e4", "driverId": "demo-d4", "driverName": "محمد بيت سعيد", "date": "2026-11-17", "site": "موقع مشروع ريسوت", "startTime": "06:00", "endTime": "18:00", "startMeter": 6053.7, "endMeter": 6065.4, "fuelLiters": 325, "fuelPrice": 0.258, "hours": 11.7, "demo": true}, "demo-s055": {"equipmentId": "demo-e1", "driverId": "demo-d2", "driverName": "خالد الكثيري", "date": "2026-11-18", "site": "طريق صلالة – طاقة", "startTime": "07:00", "endTime": "16:00", "startMeter": 4051.7, "endMeter": 4060.7, "fuelLiters": 125, "fuelPrice": 0.258, "hours": 9, "demo": true}, "demo-s056": {"equipmentId": "demo-e3", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-18", "site": "كسارة عوقد", "startTime": "06:30", "endTime": "15:00", "startMeter": 9566.2, "endMeter": 9574.4, "fuelLiters": 80, "fuelPrice": 0.258, "hours": 8.2, "demo": true}, "demo-s057": {"equipmentId": "demo-e4", "driverId": "demo-d4", "driverName": "محمد بيت سعيد", "date": "2026-11-18", "site": "موقع مشروع ريسوت", "startTime": "06:00", "endTime": "18:00", "startMeter": 6065.4, "endMeter": 6077.1, "fuelLiters": 270, "fuelPrice": 0.258, "hours": 11.7, "demo": true}, "demo-s058": {"equipmentId": "demo-e1", "driverId": "demo-d2", "driverName": "خالد الكثيري", "date": "2026-11-19", "site": "طريق صلالة – طاقة", "startTime": "07:00", "endTime": "17:00", "startMeter": 4060.7, "endMeter": 4070.7, "fuelLiters": 140, "fuelPrice": 0.258, "hours": 10, "demo": true}, "demo-s059": {"equipmentId": "demo-e2", "driverId": "demo-d4", "driverName": "محمد بيت سعيد", "date": "2026-11-19", "site": "طريق صلالة – طاقة", "startTime": "07:00", "endTime": "15:30", "startMeter": 2721.8, "endMeter": 2729.8, "fuelLiters": 105, "fuelPrice": 0.258, "hours": 8.0, "demo": true}, "demo-s060": {"equipmentId": "demo-e3", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-19", "site": "كسارة عوقد", "startTime": "07:00", "endTime": "16:00", "startMeter": 9574.4, "endMeter": 9583.1, "fuelLiters": 70, "fuelPrice": 0.258, "hours": 8.7, "demo": true}, "demo-s061": {"equipmentId": "demo-e1", "driverId": "demo-d2", "driverName": "خالد الكثيري", "date": "2026-11-21", "site": "طريق صلالة – طاقة", "startTime": "07:30", "endTime": "17:30", "startMeter": 4070.7, "endMeter": 4080.7, "fuelLiters": 140, "fuelPrice": 0.258, "hours": 10, "demo": true}, "demo-s062": {"equipmentId": "demo-e2", "driverId": "demo-d2", "driverName": "خالد الكثيري", "date": "2026-11-21", "site": "طريق صلالة – طاقة", "startTime": "06:30", "endTime": "14:30", "startMeter": 2729.8, "endMeter": 2737.6, "fuelLiters": 105, "fuelPrice": 0.258, "hours": 7.8, "demo": true}, "demo-s063": {"equipmentId": "demo-e4", "driverId": "demo-d4", "driverName": "محمد بيت سعيد", "date": "2026-11-21", "site": "موقع مشروع ريسوت", "startTime": "06:00", "endTime": "18:00", "startMeter": 6077.1, "endMeter": 6088.9, "fuelLiters": 285, "fuelPrice": 0.258, "hours": 11.8, "demo": true}, "demo-s064": {"equipmentId": "demo-e1", "driverId": "demo-d2", "driverName": "خالد الكثيري", "date": "2026-11-22", "site": "طريق صلالة – طاقة", "startTime": "07:00", "endTime": "16:00", "startMeter": 4080.7, "endMeter": 4089.5, "fuelLiters": 125, "fuelPrice": 0.258, "hours": 8.8, "demo": true}, "demo-s065": {"equipmentId": "demo-e2", "driverId": "demo-d2", "driverName": "خالد الكثيري", "date": "2026-11-22", "site": "طريق صلالة – طاقة", "startTime": "06:30", "endTime": "15:30", "startMeter": 2737.6, "endMeter": 2746.6, "fuelLiters": 115, "fuelPrice": 0.258, "hours": 9, "demo": true}, "demo-s066": {"equipmentId": "demo-e3", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-22", "site": "كسارة عوقد", "startTime": "06:30", "endTime": "15:30", "startMeter": 9583.1, "endMeter": 9592.1, "fuelLiters": 85, "fuelPrice": 0.258, "hours": 9, "demo": true}, "demo-s067": {"equipmentId": "demo-e1", "driverId": "demo-d2", "driverName": "خالد الكثيري", "date": "2026-11-23", "site": "طريق صلالة – طاقة", "startTime": "06:30", "endTime": "15:30", "startMeter": 4089.5, "endMeter": 4098.5, "fuelLiters": 125, "fuelPrice": 0.258, "hours": 9, "demo": true}, "demo-s068": {"equipmentId": "demo-e2", "driverId": "demo-d2", "driverName": "خالد الكثيري", "date": "2026-11-23", "site": "طريق صلالة – طاقة", "startTime": "07:30", "endTime": "16:30", "startMeter": 2746.6, "endMeter": 2755.4, "fuelLiters": 95, "fuelPrice": 0.258, "hours": 8.8, "demo": true}, "demo-s069": {"equipmentId": "demo-e3", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-23", "site": "كسارة عوقد", "startTime": "07:00", "endTime": "16:00", "startMeter": 9592.1, "endMeter": 9601.1, "fuelLiters": 75, "fuelPrice": 0.258, "hours": 9, "demo": true}, "demo-s070": {"equipmentId": "demo-e4", "driverId": "demo-d4", "driverName": "محمد بيت سعيد", "date": "2026-11-23", "site": "موقع مشروع ريسوت", "startTime": "06:00", "endTime": "18:00", "startMeter": 6088.9, "endMeter": 6100.7, "fuelLiters": 285, "fuelPrice": 0.258, "hours": 11.8, "demo": true}, "demo-s071": {"equipmentId": "demo-e1", "driverId": "demo-d1", "driverName": "سالم المعشني", "date": "2026-11-24", "site": "طريق صلالة – طاقة", "startTime": "06:30", "endTime": "15:30", "startMeter": 4098.5, "endMeter": 4107.5, "fuelLiters": 115, "fuelPrice": 0.258, "hours": 9, "demo": true}, "demo-s072": {"equipmentId": "demo-e2", "driverId": "demo-d4", "driverName": "محمد بيت سعيد", "date": "2026-11-24", "site": "طريق صلالة – طاقة", "startTime": "07:00", "endTime": "16:00", "startMeter": 2755.4, "endMeter": 2764.4, "fuelLiters": 115, "fuelPrice": 0.258, "hours": 9, "demo": true}, "demo-s073": {"equipmentId": "demo-e3", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-24", "site": "كسارة عوقد", "startTime": "07:30", "endTime": "17:00", "startMeter": 9601.1, "endMeter": 9610.3, "fuelLiters": 85, "fuelPrice": 0.258, "hours": 9.2, "demo": true}, "demo-s074": {"equipmentId": "demo-e4", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-24", "site": "موقع مشروع ريسوت", "startTime": "06:00", "endTime": "18:00", "startMeter": 6100.7, "endMeter": 6112.5, "fuelLiters": 290, "fuelPrice": 0.258, "hours": 11.8, "demo": true}, "demo-s075": {"equipmentId": "demo-e1", "driverId": "demo-d2", "driverName": "خالد الكثيري", "date": "2026-11-25", "site": "طريق صلالة – طاقة", "startTime": "07:00", "endTime": "15:00", "startMeter": 4107.5, "endMeter": 4115.5, "fuelLiters": 115, "fuelPrice": 0.258, "hours": 8, "demo": true}, "demo-s076": {"equipmentId": "demo-e2", "driverId": "demo-d4", "driverName": "محمد بيت سعيد", "date": "2026-11-25", "site": "طريق صلالة – طاقة", "startTime": "06:30", "endTime": "14:30", "startMeter": 2764.4, "endMeter": 2771.9, "fuelLiters": 100, "fuelPrice": 0.258, "hours": 7.5, "demo": true}, "demo-s077": {"equipmentId": "demo-e3", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-25", "site": "كسارة عوقد", "startTime": "07:00", "endTime": "15:00", "startMeter": 9610.3, "endMeter": 9617.8, "fuelLiters": 65, "fuelPrice": 0.258, "hours": 7.5, "demo": true}, "demo-s078": {"equipmentId": "demo-e4", "driverId": "demo-d3", "driverName": "راجو كومار", "date": "2026-11-25", "site": "موقع مشروع ريسوت", "startTime": "06:00", "endTime": "18:00", "startMeter": 6112.5, "endMeter": 6124.2, "fuelLiters": 285, "fuelPrice": 0.258, "hours": 11.7, "demo": true}}, "maintenance": {"demo-m1": {"equipmentId": "demo-e1", "kind": "service", "date": "2026-11-03", "meterAt": 3958.0, "cost": 85.0, "vendor": "ورشة الوادي", "description": "صيانة دورية: تغيير زيت المحرك والفلاتر", "demo": true}, "demo-m2": {"equipmentId": "demo-e2", "kind": "repair", "date": "2026-11-12", "meterAt": 2696.3, "cost": 140.0, "vendor": "الوكيل", "description": "إصلاح تسريب في خرطوم الهيدروليك", "demo": true}, "demo-m3": {"equipmentId": "demo-e3", "kind": "tires", "date": "2026-11-18", "meterAt": 9574.4, "cost": 320.0, "vendor": "محل الإطارات", "description": "تغيير إطارين خلفيين", "demo": true}}, "settings": {"main": {"fuelPrice": 0.258, "dueSoon": 25, "highPct": 25}}};
+async function loadDemo() {
+  const shift = Math.round((new Date(today() + "T00:00:00") - new Date("2026-11-26T00:00:00")) / 864e5);
+  const mv = d => { if (!d) return d; const x = new Date(d + "T00:00:00"); x.setDate(x.getDate() + shift); return iso(x); };
+  const data = LocalDB.dump();
+  for (const [c, docs] of Object.entries(DEMO)) { data[c] ||= {}; for (const [id, d] of Object.entries(docs)) { const v = {...d}; if (v.date) v.date = mv(v.date); if (c !== "settings" || !data.settings?.main) data[c][id] = v; } }
+  LocalDB.replace(data); toast("أُضيفت البيانات التجريبية");
+}
+
+
+$("#backupBtn").addEventListener("click", () => {
+  const data = JSON.stringify({app: "tgtec-equipment", version: 1, savedAt: new Date().toISOString(), data: LocalDB.dump()});
+  const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([data], {type: "application/json"})); a.download = "tgtec-equipment-backup-" + today() + ".json"; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+});
+$("#restoreFile").addEventListener("change", async e => {
+  const f = e.target.files && e.target.files[0]; const er = $("#restoreErr"); er.hidden = true; if (!f) return;
+  try {
+    const j = JSON.parse(await f.text());
+    if (!j || j.app !== "tgtec-equipment" || typeof j.data !== "object") throw 0;
+    LocalDB.replace(j.data); toast("تمت استعادة البيانات");
+  } catch (x) { er.textContent = "هذا الملف ليس نسخة احتياطية من نظام المعدات."; er.hidden = false; }
+  e.target.value = "";
+});
+
+/* ---------- data ---------- */
+setTab(S.tab);
+(async () => {
+  const db = LocalDB, user = null;
+  S.downloads = {save: async ({filename, data}) => { const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([data], {type: "text/csv;charset=utf-8"})); a.download = filename; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500); }};
+  S.db = db;
+  const timer = setTimeout(() => { $("#netNote").hidden = false; }, 10000);
+  const done = () => { clearTimeout(timer); $("#netNote").hidden = true; };
+  const sub = (name, key, toMap) => db.collection(name).onSnapshot(snap => {
+    const docs = snap.docs.map(d => ({...d.data(), _id: d.id}));
+    if (toMap) S[key] = new Map(docs.map(d => [d._id, d])); else S[key] = docs;
+    if (!snap.metadata.fromCache) { S.got[key] = true; done(); } else if (docs.length) S.got[key] = true;
+    render();
+  }, err => { S.got[key] = true; done(); render(); if (err.code !== "revoked") toast("تعذّر تحميل جزء من البيانات"); });
+  sub("equipment", "equipment", true); sub("drivers", "drivers", true); sub("shifts", "shifts", false); sub("maintenance", "maint", false);
+  db.doc("settings/main").onSnapshot(d => {
+    if (d.exists) { const v = d.data(); S.settings = {fuelPrice: num(v.fuelPrice) ?? 0.258, dueSoon: num(v.dueSoon) ?? 25, highPct: num(v.highPct) ?? 25}; }
+    $("#setFuel").value = S.settings.fuelPrice; $("#setSoon").value = S.settings.dueSoon; $("#setHigh").value = S.settings.highPct;
+    render();
+  }, () => {});
+  $("#setFuel").value = S.settings.fuelPrice; $("#setSoon").value = S.settings.dueSoon; $("#setHigh").value = S.settings.highPct;
+})();
+})();
+</script>
+
+</body>
+</html>
