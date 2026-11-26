@@ -170,7 +170,7 @@ footer{border-top:1px solid var(--rule);font-size:14px;color:var(--grey);padding
 .blabel{display:inline-block;font-weight:600;font-size:15px;color:var(--red);margin-bottom:10px}
 .h1like{font-size:clamp(32px,4.6vw,52px);line-height:1.2;margin:0 0 16px;text-wrap:balance}
 .tgla{border-top:1px solid var(--rule)}
-.plist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:6px 0 clamp(36px,4.5vw,60px)}
+.plist{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:6px 0 clamp(36px,4.5vw,60px)}
 .pt{display:flex;flex-direction:column;gap:8px;padding:24px;background:var(--soft);border-top:4px solid var(--red);color:inherit;text-decoration:none;transition:transform .2s,box-shadow .2s}
 .pt.soon{background:var(--ink);color:var(--bg)}
 .pt:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.12)}
@@ -181,6 +181,7 @@ footer{border-top:1px solid var(--rule);font-size:14px;color:var(--grey);padding
 .pt h3{font-size:clamp(19px,2vw,22px)}
 .pt p{margin:0;opacity:.75}
 .pt-go{margin-top:auto;padding-top:8px;font-weight:600;color:var(--red)}
+@media(max-width:1000px){.plist{grid-template-columns:repeat(2,minmax(0,1fr))}.plist .pt:last-child{grid-column:1/-1}}
 @media(max-width:760px){.plist{grid-template-columns:minmax(0,1fr)}}
 @media(prefers-reduced-motion:reduce){.pt{transition:none}.pt:hover{transform:none}}
 
@@ -226,7 +227,7 @@ footer{border-top:1px solid var(--rule);font-size:14px;color:var(--grey);padding
 .svcs h2::after{content:"";display:block;width:56px;height:6px;background:var(--red);margin-top:16px}
 .svc-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px 40px;flex-wrap:wrap;margin-bottom:clamp(24px,3vw,40px)}
 .svc-lead{margin:0;max-width:34em;font-size:clamp(17px,1.6vw,19px);opacity:.8}
-.svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.svc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .svc{display:flex;flex-direction:column;gap:12px;padding:28px 24px;border:1px solid color-mix(in srgb,var(--bg) 18%,transparent);border-top:4px solid var(--red);background:color-mix(in srgb,var(--bg) 4%,transparent);transition:background .2s}
 .svc:hover{background:color-mix(in srgb,var(--bg) 8%,transparent)}
 .svc-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
@@ -236,10 +237,69 @@ footer{border-top:1px solid var(--rule);font-size:14px;color:var(--grey);padding
 .svc p{margin:0;opacity:.75}
 .svc-tags{list-style:none;margin:auto 0 0;padding:14px 0 0;display:flex;flex-wrap:wrap;gap:8px;border-top:1px solid color-mix(in srgb,var(--bg) 14%,transparent)}
 .svc-tags li{font-size:14px;padding:3px 10px;border:1px solid color-mix(in srgb,var(--bg) 25%,transparent)}
+.svc.wide{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:16px 48px;align-items:center;border-top-color:var(--red);background:color-mix(in srgb,var(--red) 10%,transparent)}
+.svc.wide .svc-main{display:flex;flex-direction:column;gap:12px}
+.svc.wide .svc-tags{margin:0;padding:0;border:0;align-content:center}
+.svc-badge{align-self:flex-start;font-size:13px;font-weight:600;padding:2px 10px;background:var(--red);color:#fff}
+@media(max-width:900px){.svc.wide{grid-template-columns:minmax(0,1fr)}.svc.wide .svc-tags{padding-top:14px;border-top:1px solid color-mix(in srgb,var(--bg) 14%,transparent)}}
 .svc-proof{margin:clamp(20px,2.5vw,32px) 0 0;font-size:15px;opacity:.7}
 .svc-proof::before{content:"";display:inline-block;width:8px;height:8px;background:var(--red);margin-inline-end:10px;vertical-align:middle}
 @media(max-width:900px){.svc-grid{grid-template-columns:minmax(0,1fr)}}
 @media(prefers-reduced-motion:reduce){.svc{transition:none}}
+.amin{background:var(--soft)}
+.rcp{margin-top:clamp(36px,4.5vw,60px);background:var(--bg);border-top:4px solid var(--red);padding:clamp(20px,2.5vw,32px)}
+.rcp-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:18px}
+.rcp-head h3{font-size:clamp(20px,2.2vw,24px)}
+.rcp-head p{margin:4px 0 0;color:var(--grey)}
+.rcp-tag{flex:none;font-size:13px;padding:2px 10px;border:1px solid var(--rule);color:var(--grey)}
+.rcp-body{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:24px 40px;align-items:start}
+.rcp-scroll{overflow-x:auto}
+.rcp-tbl{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.rcp-tbl th{text-align:start;font-size:13px;font-weight:600;color:var(--grey);padding:0 10px 10px;border-bottom:2px solid var(--ink);white-space:nowrap}
+.rcp-tbl td{padding:12px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+.rcp-tbl th:first-child,.rcp-tbl td:first-child{padding-inline-start:0}
+.rcp-tbl td small{display:block;font-size:13px;color:var(--grey);white-space:nowrap}
+.rcp-tbl td:nth-child(2){white-space:nowrap}
+.rcp-tbl td:last-child{font-weight:700}
+.rcp-tbl tr.lim td{background:color-mix(in srgb,var(--red) 8%,transparent)}
+.rcp-tbl tr.lim td:last-child{color:var(--red)}
+.rcp-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.rcp-stats div{background:var(--soft);padding:16px;display:flex;flex-direction:column;gap:4px}
+.rcp-stats span{font-size:14px;color:var(--grey)}
+.rcp-stats b{font-family:"Readex Pro",sans-serif;font-size:clamp(22px,2.4vw,28px);font-variant-numeric:tabular-nums}
+.rcp-stats small{font-size:14px;font-weight:500}
+.rcp-stats .hl{background:var(--ink);color:var(--bg)}
+.rcp-stats .hl span{color:inherit;opacity:.75}
+.rcp-stats .hl b{color:var(--red)}
+.rcp-note{margin:18px 0 0;font-size:15px;color:var(--grey)}
+@media(max-width:900px){.rcp-body{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){.rcp-tbl th,.rcp-tbl td{padding-inline:6px;font-size:15px}.rcp-tbl th{font-size:12px}.rcp-tbl td small{font-size:12px}}
+
+.amin-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:32px 64px;align-items:center}
+.amin h2{font-size:clamp(28px,3.6vw,40px)}
+.amin h2::after{content:"";display:block;width:56px;height:6px;background:var(--red);margin-top:16px}
+.amin-lead{font-size:clamp(17px,1.6vw,19px);color:var(--grey);margin:0 0 28px;max-width:38em}
+.af-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 32px}
+.af{display:flex;gap:14px;align-items:flex-start}
+.af-ico{flex:none;width:48px;height:48px;display:grid;place-items:center;background:var(--bg);border:1.5px solid var(--rule);color:var(--red)}
+.af-ico svg{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.af h3{font-size:17px}
+.af p{margin:4px 0 0;color:var(--grey);font-size:15px}
+.rcpt{margin:0;justify-self:center;width:min(320px,100%)}
+.rcpt-paper{background:#fff;color:#0b0b0b;padding:26px 24px 22px;box-shadow:0 18px 40px rgba(0,0,0,.14);border-top:6px solid var(--red);transform:rotate(-2deg)}
+.rcpt-brand{font-family:"Readex Pro",sans-serif;font-weight:700;font-size:28px;text-align:center}
+.rcpt-sub{text-align:center;font-size:13px;color:#646464;margin-bottom:14px}
+.rcpt-items{list-style:none;margin:0;padding:12px 0;border-block:1.5px dashed #c9c9c9}
+.rcpt-items li{display:grid;grid-template-columns:1fr auto 4.5em;gap:10px;font-size:15px;padding:3px 0}
+.rcpt-items li span:last-child,.rcpt-row span:last-child{text-align:end;font-variant-numeric:tabular-nums}
+.rcpt-row{display:flex;justify-content:space-between;font-size:14px;padding-top:8px;color:#444}
+.rcpt-total{font-weight:700;font-size:18px;color:#0b0b0b;border-top:1.5px solid #0b0b0b;margin-top:8px;padding-top:10px}
+.rcpt-loy{display:flex;justify-content:space-between;gap:8px;margin-top:12px;padding:8px 10px;background:#f4f4f4;font-size:13px;color:#444}
+.rcpt-loy b{color:#e4002b}
+.rcpt-ok{margin-top:14px;text-align:center;font-size:13px;font-weight:600;color:#1f8a4c}
+.rcpt figcaption{text-align:center;font-size:13px;color:var(--grey);margin-top:16px}
+@media(max-width:900px){.amin-grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){.af-grid{grid-template-columns:minmax(0,1fr)}}
 .sec{background:var(--soft)}
 .sec .cols3{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:30px}
 .sec .vm{border-top:4px solid var(--red);background:var(--bg);padding:24px}
@@ -378,6 +438,12 @@ dd{margin-bottom:12px}
           <h3 data-k="p2t">نموذج ذكاء اصطناعي عُماني</h3>
           <p data-k="p2d">نموذج لغوي نملكه بالكامل، يتقن اللغة العربية الرسمية وأسلوب المراسلات الحكومية العُمانية.</p>
           <span class="pt-go" data-k="p2g">تعرّف على النموذج ←</span>
+        </a>
+        <a class="pt soon" href="#amin">
+          <span class="pt-row"><span class="pt-n">03</span><span class="pt-st" data-k="p3s">قيد التطوير</span></span>
+          <h3 data-k="p3t">أمين · نظام نقاط البيع</h3>
+          <p data-k="p3d">نقاط بيع مرتبطة بالفواتير والمخزون والإنتاج والتقارير، للمحلات والمطاعم والفروع.</p>
+          <span class="pt-go" data-k="p3g">تعرّف على أمين ←</span>
         </a>
       </div>
       <div class="top">
@@ -522,6 +588,68 @@ dd{margin-bottom:12px}
     </div>
   </section>
 
+  <section class="band amin" id="amin">
+    <div class="wrap amin-grid">
+      <div>
+        <span class="blabel" data-k="am0">المنتج الثالث</span><span class="m-badge" data-k="am9">قيد التطوير</span>
+        <h2 data-k="am1">أمين · نظام نقاط البيع</h2>
+        <p class="amin-lead" data-k="am2">نظام نقاط بيع عربي، يربط كل عملية بيع بفاتورتها والمخزون والتقارير في مكان واحد. مصمَّم للمحلات والمطاعم والمقاهي والشركات متعددة الفروع.</p>
+        <div class="af-grid">
+          <div class="af"><span class="af-ico"><svg viewBox="0 0 28 28" width="28" height="28" aria-hidden="true"><rect x="3" y="5" width="22" height="14" rx="2"/><path d="M10 23h8M14 19v4M7 10h6M7 14h4"/></svg></span><div><h3 data-k="a1t">بيع سريع من أي جهاز</h3><p data-k="a1d">الجوال أو الجهاز اللوحي أو الحاسوب، بواجهة عربية بسيطة.</p></div></div>
+          <div class="af"><span class="af-ico"><svg viewBox="0 0 28 28" width="28" height="28" aria-hidden="true"><path d="M6 3h16v22l-3-2-2 2-3-2-3 2-2-2-3 2z"/><path d="M10 9h8M10 13h8M10 17h5"/></svg></span><div><h3 data-k="a2t">فواتير مرتبطة بكل عملية</h3><p data-k="a2d">فاتورة مطبوعة أو رقمية عبر واتساب أو البريد، مع احتساب ضريبة القيمة المضافة.</p></div></div>
+          <div class="af"><span class="af-ico"><svg viewBox="0 0 28 28" width="28" height="28" aria-hidden="true"><path d="M4 9l10-5 10 5v10l-10 5-10-5z"/><path d="M4 9l10 5 10-5M14 14v10"/></svg></span><div><h3 data-k="a3t">إدارة المخزون</h3><p data-k="a3d">متابعة الكميات لحظة بلحظة، وتنبيه عند نقص الأصناف.</p></div></div>
+          <div class="af"><span class="af-ico"><svg viewBox="0 0 28 28" width="28" height="28" aria-hidden="true"><path d="M4 24h20M7 20v-6M12 20V8M17 20v-9M22 20V5"/></svg></span><div><h3 data-k="a4t">تقارير المبيعات</h3><p data-k="a4d">يومية وشهرية، حسب الصنف والموظف والفرع، مع صلاحيات لكل موظف.</p></div></div>
+          <div class="af"><span class="af-ico"><svg viewBox="0 0 28 28" width="28" height="28" aria-hidden="true"><circle cx="10" cy="9" r="4"/><path d="M3 23c0-4 3-7 7-7s7 3 7 7M18 6a4 4 0 0 1 0 7M21 16c2.5 1 4 3.5 4 7"/></svg></span><div><h3 data-k="a5t">بطاقة الولاء</h3><p data-k="a5d">سجلّ للعملاء بأسمائهم وأرقامهم، يحسب نقاط كل عميل تلقائياً مع كل شراء، ويستبدلها بخصومات.</p></div></div>
+          <div class="af"><span class="af-ico"><svg viewBox="0 0 28 28" width="28" height="28" aria-hidden="true"><path d="M3 11a16 16 0 0 1 22 0M7 15a10 10 0 0 1 14 0M11 19a4 4 0 0 1 6 0"/><path d="M4 4l20 20"/></svg></span><div><h3 data-k="a6t">يعمل دون إنترنت</h3><p data-k="a6d">يستمر البيع عند انقطاع الاتصال، ويُزامن البيانات عند عودته.</p></div></div>
+          <div class="af"><span class="af-ico"><svg viewBox="0 0 28 28" width="28" height="28" aria-hidden="true"><rect x="2" y="9" width="9" height="12" rx="1"/><rect x="17" y="9" width="9" height="12" rx="1"/><path d="M12 12h4m-2-2 2 2-2 2M16 18h-4m2 2-2-2 2-2"/></svg></span><div><h3 data-k="a7t">نقل المواد بين المخازن</h3><p data-k="a7d">نقل الأصناف بين المخازن والفروع، مع سجل لكل عملية نقل وتحديث الكميات تلقائياً.</p></div></div>
+          <div class="af"><span class="af-ico"><svg viewBox="0 0 28 28" width="28" height="28" aria-hidden="true"><path d="M5 12h18v3a9 9 0 0 1-18 0z"/><path d="M9 8c0-2 2-2 2-4M14 8c0-2 2-2 2-4M19 8c0-2 2-2 2-4"/></svg></span><div><h3 data-k="a8t">الإنتاج والوصفات</h3><p data-k="a8d">حدّد مكوّنات كل منتج وتكلفتها، فيحسب النظام التكلفة وهامش الربح وعدد الوحدات الممكن إنتاجها.</p></div></div>
+        </div>
+      </div>
+      <figure class="rcpt" aria-label="مثال توضيحي لفاتورة من نظام أمين">
+        <div class="rcpt-paper">
+          <div class="rcpt-brand">أمين</div>
+          <div class="rcpt-sub" data-k="am3">فاتورة ضريبية مبسطة · #1024</div>
+          <ul class="rcpt-items"><li><span>قهوة عربية</span><span>1 ×</span><span>0.500</span></li><li><span>شاي كرك</span><span>2 ×</span><span>0.600</span></li><li><span>سمبوسة</span><span>3 ×</span><span>0.600</span></li></ul>
+          <div class="rcpt-row"><span data-k="am4">المجموع</span><span>1.700</span></div>
+          <div class="rcpt-row"><span data-k="am5">ضريبة القيمة المضافة <bdi>5%</bdi></span><span>0.085</span></div>
+          <div class="rcpt-row rcpt-total"><span data-k="am6">الإجمالي (ر.ع)</span><span>1.785</span></div>
+          <div class="rcpt-loy"><span><span data-k="am10">العميل:</span> <span data-k="am11">سالم</span></span><span><b>+17</b> <span data-k="am12">نقطة</span> · <span data-k="am13">الرصيد</span> 240</span></div>
+          <div class="rcpt-ok" data-k="am7">✓ أُرسلت الفاتورة عبر واتساب</div>
+        </div>
+        <figcaption data-k="am8">مثال توضيحي</figcaption>
+      </figure>
+    </div>
+    <div class="wrap">
+      <div class="rcp">
+        <div class="rcp-head">
+          <div><h3 data-k="rc0">الإنتاج والوصفات</h3><p data-k="rc1">مثال: وصفة بيتزا مارجريتا واحدة</p></div>
+          <span class="rcp-tag" data-k="rc2">مثال توضيحي</span>
+        </div>
+        <div class="rcp-body">
+          <div class="rcp-scroll">
+          <table class="rcp-tbl">
+            <thead><tr><th data-k="rch1">المكوّن</th><th data-k="rch2">لكل بيتزا</th><th data-k="rch3">التكلفة (ر.ع)</th><th data-k="rch4">يكفي لعدد</th></tr></thead>
+            <tbody>
+              <tr><td><span data-k="rcr1">عجينة</span><small><span data-k="rcav">المتوفر:</span> <bdi data-k="rcr1a">12 كغ</bdi></small></td><td><bdi data-k="rcr1q">250 غ</bdi></td><td>0.120</td><td>48</td></tr>
+              <tr><td><span data-k="rcr2">صلصة طماطم</span><small><span data-k="rcav">المتوفر:</span> <bdi data-k="rcr2a">4 كغ</bdi></small></td><td><bdi data-k="rcr2q">80 غ</bdi></td><td>0.060</td><td>50</td></tr>
+              <tr class="lim"><td><span data-k="rcr3">جبن موزاريلا</span><small><span data-k="rcav">المتوفر:</span> <bdi data-k="rcr3a">6 كغ</bdi></small></td><td><bdi data-k="rcr3q">150 غ</bdi></td><td>0.450</td><td>40</td></tr>
+              <tr><td><span data-k="rcr4">زيت وأعشاب</span><small><span data-k="rcav">المتوفر:</span> <bdi data-k="rcr4a">1.5 لتر</bdi></small></td><td><bdi data-k="rcr4q">15 مل</bdi></td><td>0.030</td><td>100</td></tr>
+              <tr><td><span data-k="rcr5">علبة تغليف</span><small><span data-k="rcav">المتوفر:</span> <bdi data-k="rcr5a">120</bdi></small></td><td><bdi data-k="rcr5q">1</bdi></td><td>0.070</td><td>120</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <div class="rcp-stats">
+            <div><span data-k="rcs1">تكلفة البيتزا</span><b>0.730 <small data-k="rcu">ر.ع</small></b></div>
+            <div><span data-k="rcs2">سعر البيع</span><b>2.000 <small data-k="rcu2">ر.ع</small></b></div>
+            <div><span data-k="rcs3">هامش الربح</span><b><bdi>63.5%</bdi></b></div>
+            <div class="hl"><span data-k="rcs4">يمكن إنتاج</span><b>40 <small data-k="rcs5">بيتزا</small></b></div>
+          </div>
+        </div>
+        <p class="rcp-note" data-k="rc3">المكوّن الذي يحدّد عدد الإنتاج هنا هو جبن الموزاريلا. وعند كل عملية بيع تُخصم المكوّنات من المخزون تلقائياً.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="band sec" id="security">
     <div class="wrap">
       <span class="blabel" data-k="s0">الأمان والخصوصية</span>
@@ -549,9 +677,9 @@ dd{margin-bottom:12px}
       <div class="svc-grid">
         <article class="svc">
           <div class="svc-top"><span class="svc-ico"><svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true"><rect x="4" y="7" width="32" height="24" rx="2"/><path d="M4 13h32M10 19h9M10 24h6M24 19h6v7h-6zM14 35h12M20 31v4"/></svg></span><span class="svc-n">01</span></div>
-          <h3 data-k="g3t">تطوير الأنظمة الإدارية الداخلية</h3>
-          <p data-k="g3d">أنظمة تعمل على شبكة الجهة، مثل أنظمة الطلبات والمتابعة والأرشفة.</p>
-          <ul class="svc-tags"><li data-k="g31">أنظمة الطلبات والمتابعة</li><li data-k="g32">صلاحيات المستخدمين</li><li data-k="g33">تقارير ولوحات متابعة</li></ul>
+          <h3 data-k="g3t">أنظمة الإدارة والمحاسبة</h3>
+          <p data-k="g3d">نطوّر أنظمتكم الحالية، أو ننشئ أنظمة جديدة للإدارة والمحاسبة مصمَّمة لاحتياج الجهة وتعمل على شبكتها الداخلية.</p>
+          <ul class="svc-tags"><li data-k="g31">تطوير الأنظمة الحالية</li><li data-k="g32">إنشاء أنظمة جديدة</li><li data-k="g33">الحسابات والفواتير</li><li data-k="g34">الطلبات والمتابعة والأرشفة</li><li data-k="g35">التقارير والصلاحيات</li></ul>
         </article>
         <article class="svc">
           <div class="svc-top"><span class="svc-ico"><svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true"><ellipse cx="20" cy="9" rx="13" ry="4.5"/><path d="M7 9v22c0 2.5 5.8 4.5 13 4.5s13-2 13-4.5V9M7 16.5c0 2.5 5.8 4.5 13 4.5s13-2 13-4.5M7 24c0 2.5 5.8 4.5 13 4.5s13-2 13-4.5"/></svg></span><span class="svc-n">02</span></div>
@@ -564,6 +692,21 @@ dd{margin-bottom:12px}
           <h3 data-k="g5t">تصميم المواقع والمنصات الرسمية</h3>
           <p data-k="g5d">مواقع تعريفية وبوابات داخلية للجهات والشركات.</p>
           <ul class="svc-tags"><li data-k="g51">موقع ثنائي اللغة</li><li data-k="g52">متوافق مع الجوال</li><li data-k="g53">ربط الدومين والبريد الرسمي</li></ul>
+        </article>
+        <article class="svc">
+          <div class="svc-top"><span class="svc-ico"><svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true"><path d="M8 22v-3a12 12 0 0 1 24 0v3"/><rect x="5" y="21" width="6" height="10" rx="2"/><rect x="29" y="21" width="6" height="10" rx="2"/><path d="M32 31v1a4 4 0 0 1-4 4h-5"/><rect x="18" y="33.5" width="5" height="4" rx="1.5"/></svg></span><span class="svc-n">04</span></div>
+          <h3 data-k="g6t">الدعم الفني والصيانة</h3>
+          <p data-k="g6d">نرافق أنظمتكم بعد تسليمها: صيانة وتحديثات مستمرة، وتدريب للموظفين، ومتابعة للأعطال حتى حلّها.</p>
+          <ul class="svc-tags"><li data-k="g61">الصيانة والتحديثات</li><li data-k="g62">تدريب الموظفين</li><li data-k="g63">متابعة الأعطال وحلّها</li></ul>
+        </article>
+        <article class="svc wide">
+          <div class="svc-main">
+            <div class="svc-top"><span class="svc-ico"><svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true"><rect x="5" y="9" width="20" height="26" rx="1"/><path d="M10 15h4M16 15h4M10 21h4M16 21h4M13 35v-6h4v6"/><circle cx="30" cy="12" r="5"/><path d="M30 4.5v2.5M30 17v2.5M22.5 12H25M35 12h2.5M24.7 6.7l1.8 1.8M33.5 15.5l1.8 1.8M24.7 17.3l1.8-1.8M33.5 8.5l1.8-1.8"/></svg></span><span class="svc-n">05</span></div>
+            <span class="svc-badge" data-k="g7b">للشركات التي لا تملك قسم تقنية معلومات</span>
+            <h3 data-k="g7t">إدارة الحسابات والأنظمة</h3>
+            <p data-k="g7d">نكون قسم تقنية المعلومات لشركتك: نتولّى إدارة حساباتكم وأنظمتكم وأجهزتكم ومتابعتها باستمرار، فتتفرغون لعملكم ونهتم نحن بالجانب التقني.</p>
+          </div>
+          <ul class="svc-tags"><li data-k="g71">إدارة حسابات المستخدمين والبريد الرسمي</li><li data-k="g72">الصلاحيات وكلمات المرور</li><li data-k="g73">متابعة الأنظمة والأجهزة</li><li data-k="g74">النسخ الاحتياطي واستعادة البيانات</li><li data-k="g75">التراخيص والاشتراكات</li><li data-k="g76">دعم فني عن بُعد وفي الموقع</li></ul>
         </article>
       </div>
       <p class="svc-proof" data-k="g8">من أعمالنا: هذا الموقع، ونظام «مساعد الموظف الذكي».</p>
@@ -593,7 +736,7 @@ dd{margin-bottom:12px}
     <div class="fgrid">
       <div><div class="fbrand"><img src="data:image/png;base64,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" alt=""><span data-k="fb">تجتك TGTEC</span></div><p data-k="f1" style="color:var(--grey);font-size:15px">تجلى للتجارة والمقاولات. ظفار، سلطنة عمان.</p></div>
       <div><h4 data-k="f2">الشركة</h4><a href="#about" data-k="f3">من نحن</a><a href="#security" data-k="f4">الأمان والخصوصية</a><a href="#services" data-k="f11">خدمات أخرى</a><a href="#contact" data-k="f5">تواصل معنا</a></div>
-      <div><h4 data-k="f6">المنتج</h4><a href="#tgla" data-k="f7">مساعد الموظف الذكي</a><a href="#features" data-k="f10">المزايا</a><a href="#how" data-k="f8">كيف يعمل</a><a href="#model" data-k="f12">النموذج العُماني</a></div>
+      <div><h4 data-k="f6">المنتج</h4><a href="#tgla" data-k="f7">مساعد الموظف الذكي</a><a href="#features" data-k="f10">المزايا</a><a href="#how" data-k="f8">كيف يعمل</a><a href="#model" data-k="f12">النموذج العُماني</a><a href="#amin" data-k="f13">أمين · نقاط البيع</a></div>
       <div><h4 data-k="f9">تواصل</h4><a href="mailto:info@tgtec.om">info@tgtec.om</a><a href="https://wa.me/96891155592" target="_blank" rel="noopener" dir="ltr">WhatsApp +968 9115 5592</a><a href="https://tgtec.om">tgtec.om</a></div>
     </div>
     <div class="fcopy" data-k="ft">© 2026 تجلى للتجارة والمقاولات. جميع الحقوق محفوظة.</div>
@@ -622,7 +765,7 @@ s2t:"Use it from the browser",s2d:"Employees open it from any browser on the int
 s3t:"Draft, review, archive",s3d:"The employee writes a request, gets a formal draft, checks it against circulars, then archives it.",
 t0:"Where we are",
 t1:"A working version of the system has been approved for deployment at a government entity in Oman. We are now preparing to offer it to ministries, public authorities and large companies in Oman and the GCC.",
-g0:"Other services",g1:"Digital solutions for organizations",g2:"We build an organization's internal systems, AI included.",g9:"Request a consultation",g3t:"Internal administrative systems",g3d:"Systems that run on the organization's own network, such as request, follow-up and archiving systems.",g31:"Request and follow-up systems",g32:"User permissions",g33:"Reports and dashboards",g4t:"Database design and organization",g4d:"So the organization's data is ready for search, reporting and AI.",g41:"Tables and relationships",g42:"Data migration and cleanup",g43:"Backup and protection",g5t:"Official websites and platforms",g5d:"Company websites and internal portals for government entities and businesses.",g51:"Bilingual websites",g52:"Mobile-friendly",g53:"Domain and official email setup",g8:"Our work includes this website and the Smart Employee Assistant.",f11:"Other services",m0:"Our next project",m9:"In development",m1h:"An Omani AI model",m2h:"We are building our own language model that understands formal Arabic and the style of Omani government correspondence, fully independent of any other AI model.",m1t:"Formal Omani language",m1d:"Trained on the style of letters, circulars and decisions used by Omani entities, and their administrative terminology.",m2t:"Full independence",m2d:"A model we fully own, relying on no external AI model or service.",m3t:"Data sovereignty",m3d:"Trained and run inside the Sultanate of Oman, so entities' data stays in the country.",m4t:"Built for government",m4d:"Runs on the entity's own servers with no internet, and integrates with the Smart Employee Assistant.",r0:"Roadmap",r1a:"Today",r1t:"Smart Employee Assistant",r1d:"Runs today on an open-source language model inside the entity's network.",r2a:"Next stage",r2t:"Adapting the model",r2d:"Training it on Omani official correspondence and its terminology.",r3a:"The goal",r3t:"An independent Omani model",r3d:"A model we fully own, built and run inside the Sultanate of Oman.",f12:"The Omani model",k0:"Contact",kw:"WhatsApp",kx:"Chat on WhatsApp",k1:"Chairman & CEO",k7:"Company",k8:"Tajalla Trading & Contracting",k9:"Technology brand",v0:"A word from the CEO",v1:"My vision",v2:"Mohammed Ahmed Al-Mashani",v3:"Chairman & CEO",v7:"Curriculum vitae →",v4:"I believe AI should serve people without taking their data. TGTEC began with a need I lived myself: long hours spent drafting and reviewing correspondence, time that could go to what matters more.",v5:"My vision is for TGTEC to be the Omani partner that government entities and companies across Oman and the Gulf trust, with Arabic solutions that run inside their own networks, keep their data confidential and give employees their time back.",v8:"And we are moving toward our biggest goal: an Omani AI model that we fully own, fluent in formal Arabic and the style of Omani government correspondence, and fully independent of any other model.",v6:"We are building it with Omani hands, as a contribution to the digital transformation of Oman Vision 2040.",k2:"Mohammed Ahmed Al-Mashani",k3:"Location",k6:"✉ Email us",k4:"Dhofar, Sultanate of Oman",
+g0:"Other services",g1:"Digital solutions for organizations",g2:"We build an organization's internal systems, AI included.",g9:"Request a consultation",g3t:"Management and accounting systems",g3d:"We develop your existing systems, or build new management and accounting systems designed for your organization and running on its internal network.",g31:"Improving existing systems",g32:"Building new systems",g33:"Accounts and invoicing",g34:"Requests, follow-up and archiving",g35:"Reports and permissions",g4t:"Database design and organization",g4d:"So the organization's data is ready for search, reporting and AI.",g41:"Tables and relationships",g42:"Data migration and cleanup",g43:"Backup and protection",g5t:"Official websites and platforms",g5d:"Company websites and internal portals for government entities and businesses.",g51:"Bilingual websites",g52:"Mobile-friendly",g53:"Domain and official email setup",g6t:"Technical support and maintenance",g6d:"We stay with your systems after delivery: ongoing maintenance and updates, staff training, and issue follow-up until resolved.",g61:"Maintenance and updates",g62:"Staff training",g63:"Issue follow-up and resolution",g7b:"For companies without an IT department",g7t:"Accounts and systems management",g7d:"We act as your company's IT department: we manage and continuously monitor your accounts, systems and devices, so you can focus on your business while we take care of the technology.",g71:"User accounts and official email",g72:"Permissions and passwords",g73:"Systems and device monitoring",g74:"Backup and data recovery",g75:"Licenses and subscriptions",g76:"Remote and on-site support",g8:"Our work includes this website and the Smart Employee Assistant.",f11:"Other services",m0:"Our next project",m9:"In development",m1h:"An Omani AI model",m2h:"We are building our own language model that understands formal Arabic and the style of Omani government correspondence, fully independent of any other AI model.",m1t:"Formal Omani language",m1d:"Trained on the style of letters, circulars and decisions used by Omani entities, and their administrative terminology.",m2t:"Full independence",m2d:"A model we fully own, relying on no external AI model or service.",m3t:"Data sovereignty",m3d:"Trained and run inside the Sultanate of Oman, so entities' data stays in the country.",m4t:"Built for government",m4d:"Runs on the entity's own servers with no internet, and integrates with the Smart Employee Assistant.",r0:"Roadmap",r1a:"Today",r1t:"Smart Employee Assistant",r1d:"Runs today on an open-source language model inside the entity's network.",r2a:"Next stage",r2t:"Adapting the model",r2d:"Training it on Omani official correspondence and its terminology.",r3a:"The goal",r3t:"An independent Omani model",r3d:"A model we fully own, built and run inside the Sultanate of Oman.",f12:"The Omani model",p3s:"In development",p3t:"Amin · Point of sale",p3g:"Discover Amin →",am0:"Product three",am9:"In development",am1:"Amin · Point of sale system",am2:"An Arabic point-of-sale system that links every sale to its invoice, inventory and reports in one place. Built for shops, restaurants, cafés and multi-branch businesses.",a1t:"Sell from any device",a1d:"Phone, tablet or computer, with a simple Arabic interface.",a2t:"An invoice for every sale",a2d:"Printed or digital invoices via WhatsApp or email, with VAT calculated.",a3t:"Inventory management",a3d:"Track stock in real time, with alerts when items run low.",a4t:"Sales reports",a4d:"Daily and monthly, by item, employee and branch, with permissions for each employee.",a5t:"Loyalty card",a5d:"A customer register with names and phone numbers that adds points to each customer automatically with every purchase, redeemable for discounts.",a6t:"Works offline",a6d:"Keep selling when the connection drops; data syncs when it returns.",am3:"Simplified tax invoice · #1024",am4:"Subtotal",am5:"VAT 5%",am6:"Total (OMR)",am7:"✓ Invoice sent via WhatsApp",am8:"Illustrative example",am10:"Customer:",am11:"Salem",am12:"points",am13:"balance",f13:"Amin · Point of sale",p3d:"Point of sale linked to invoices, inventory, production and reports, for shops, restaurants and branches.",a7t:"Stock transfers",a7d:"Move items between warehouses and branches, with a log of every transfer and quantities updated automatically.",a8t:"Production and recipes",a8d:"Set each product's ingredients and their cost, and the system calculates cost, profit margin and how many units you can produce.",rc0:"Production and recipes",rc1:"Example: one Margherita pizza recipe",rc2:"Illustrative example",rch1:"Ingredient",rch2:"Per pizza",rch3:"Cost (OMR)",rch4:"Enough for",rcav:"In stock:",rcr1:"Dough",rcr1q:"250 g",rcr1a:"12 kg",rcr2:"Tomato sauce",rcr2q:"80 g",rcr2a:"4 kg",rcr3:"Mozzarella",rcr3q:"150 g",rcr3a:"6 kg",rcr4:"Oil and herbs",rcr4q:"15 ml",rcr4a:"1.5 L",rcr5:"Pizza box",rcs1:"Cost per pizza",rcs2:"Selling price",rcs3:"Profit margin",rcs4:"Can produce",rcs5:"pizzas",rcu:"OMR",rcu2:"OMR",rc3:"Here, mozzarella is the ingredient that limits production. With every sale, ingredients are deducted from stock automatically.",k0:"Contact",kw:"WhatsApp",kx:"Chat on WhatsApp",k1:"Chairman & CEO",k7:"Company",k8:"Tajalla Trading & Contracting",k9:"Technology brand",v0:"A word from the CEO",v1:"My vision",v2:"Mohammed Ahmed Al-Mashani",v3:"Chairman & CEO",v7:"Curriculum vitae →",v4:"I believe AI should serve people without taking their data. TGTEC began with a need I lived myself: long hours spent drafting and reviewing correspondence, time that could go to what matters more.",v5:"My vision is for TGTEC to be the Omani partner that government entities and companies across Oman and the Gulf trust, with Arabic solutions that run inside their own networks, keep their data confidential and give employees their time back.",v8:"And we are moving toward our biggest goal: an Omani AI model that we fully own, fluent in formal Arabic and the style of Omani government correspondence, and fully independent of any other model.",v6:"We are building it with Omani hands, as a contribution to the digital transformation of Oman Vision 2040.",k2:"Mohammed Ahmed Al-Mashani",k3:"Location",k6:"✉ Email us",k4:"Dhofar, Sultanate of Oman",
 ft:"© 2026 Tajalla Trading & Contracting. All rights reserved."
 };
 const els=[...document.querySelectorAll('[data-k]')];
